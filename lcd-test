@@ -1,0 +1,23 @@
+#include <LiquidCrystal.h>
+
+// Initialize the LCD (RS, E, D4, D5, D6, D7)
+// Pins 12, 11, 5, 4, 3, 2 are connected to RS, E, D4, D5, D6, D7 on the ATmega328
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() {
+  // Initialize the LCD as a 20x4 screen
+  lcd.begin(20, 4);
+  
+  // Print a test message on the LCD
+  lcd.print("Hello, SCavenger!");
+  
+  // Move cursor to the second line (row 1, column 0)
+  lcd.setCursor(0, 1);
+  
+  // Print another message to check if multiple lines work
+  lcd.print("Testing LCD 4-bit mode");
+}
+
+void loop() {
+  // Nothing to do here for now, the LCD test runs once during setup
+}

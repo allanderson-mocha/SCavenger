@@ -1,0 +1,2 @@
+/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc libapp_update.a CMakeFiles/__idf_app_update.dir/esp_ota_ops.c.obj CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj
+/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib libapp_update.a

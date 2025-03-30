@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject",
+    "build_dir":          "/home/johnnyc/capstone/build/bootloader",
+    "config_file":        "/home/johnnyc/capstone/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v3.4-104-g2f586ea4",
+    "phy_data_partition": "",
+    "monitor_baud" : "74880",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/Kconfig;/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/Kconfig;/home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/Kconfig;/home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/Kconfig.projbuild;/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/Kconfig.projbuild;/home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "esp8266", "esp_common", "esptool_py", "log", "main", "partition_table", "spi_flash", "" ],
+    "build_component_paths" : [ "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/log", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject/main", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table", "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash", "" ]
+}

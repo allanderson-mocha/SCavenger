@@ -1,0 +1,25 @@
+esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/packet.c.obj: \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/src/packet.c \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/private_include/esp_gdbstub_common.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_default_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/features.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_newlib_version.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_intsup.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stddef.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/include/esp_gdbstub.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/xtensa/esp_gdbstub_arch.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/xtensa_context.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/tie.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/corebits.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/system.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/xtruntime-frames.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/hal.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core-isa.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core-matmap.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/esp8266/gdbstub_target_config.h \
+ /home/johnnyc/capstone/build/config/sdkconfig.h

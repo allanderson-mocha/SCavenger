@@ -1,0 +1,35 @@
+esp-idf/libsodium/CMakeFiles/__idf_libsodium.dir/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-ssse3.c.obj: \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-ssse3.c \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_default_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/features.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_newlib_version.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_intsup.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/string.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/newlib.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/config.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/ieeefp.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core-isa.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/reent.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stddef.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/lock.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/cdefs.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/xlocale.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/strings.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/string.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_generichash_blake2b.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdlib.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/stdlib.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/alloca.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/private/sse2_64_32.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h

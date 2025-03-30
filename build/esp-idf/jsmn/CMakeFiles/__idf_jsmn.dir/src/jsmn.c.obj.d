@@ -1,0 +1,4 @@
+esp-idf/jsmn/CMakeFiles/__idf_jsmn.dir/src/jsmn.c.obj: \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/jsmn/src/jsmn.c \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/jsmn/include/jsmn.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stddef.h

@@ -1,0 +1,35 @@
+esp-idf/libsodium/CMakeFiles/__idf_libsodium.dir/libsodium/src/libsodium/crypto_secretbox/crypto_secretbox.c.obj: \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/crypto_secretbox/crypto_secretbox.c \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_secretbox.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stddef.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_secretbox_xsalsa20poly1305.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_default_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/features.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_newlib_version.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_intsup.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_stdint.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/newlib.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/config.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/ieeefp.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core-isa.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/cdefs.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_types.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/lock.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/endian.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_endian.h \
+ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/newlib/platform_include/sys/select.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/select.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_sigset.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_timeval.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/timespec.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_timespec.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_pthreadtypes.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/sched.h \
+ /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/types.h

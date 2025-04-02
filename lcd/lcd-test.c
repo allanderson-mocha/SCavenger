@@ -57,7 +57,7 @@ const unsigned char str2[] PROGMEM = ">> USC EE459L <<78901234";
 #define LCD_E           (1 << PB2)
 #define LCD_Bits        (LCD_RS|LCD_RW|LCD_E)
 
-#define LCD_Data_C     0x0f     // Bits in Port C for LCD data
+#define LCD_Data_D     0xf0     // Bits in Port D for LCD data
 #define LCD_Status     0x80     // Bit in Port D for LCD busy status
 
 int main(void) {
@@ -98,7 +98,7 @@ void lcd_stringout_P(char *s)
 */
 void lcd_init(void)
 {
-    DDRC |= LCD_Data_C;         // Set PORTC bits 0-3 for output
+    DDRD |= LCD_Data_D;         // Set PORTD bits 4-7 for output
     DDRB |= LCD_Bits;           // Set PORTB bits 2, 3 and 4 for output
 
     PORTB &= ~LCD_RS;           // Clear RS for command write
@@ -178,8 +178,8 @@ void lcd_writebyte(unsigned char x)
 */
 void lcd_writenibble(unsigned char x)
 {
-    PORTC &= ~LCD_Data_C;
-    PORTC |= (x & LCD_Data_C);  // Put low 4 bits of data in PORTC
+    PORTD &= ~LCD_Data_D;
+    PORTD |= (x & LCD_Data_D);  // Put high 4 bits of data in PORTD
 
     PORTB &= ~(LCD_RW|LCD_E);   // Set R/W=0, E=0
     PORTB |= LCD_E;             // Set E to 1
@@ -195,8 +195,8 @@ void lcd_wait()
 #ifdef USE_BUSY_FLAG
     unsigned char bf;
 
-    PORTC &= ~LCD_Data_C;       // Set for no pull ups
-    DDRC &= ~LCD_Data_C;        // Set for input
+    PORTD &= ~LCD_Data_D;       // Set for no pull ups
+    DDRD &= ~LCD_Data_D;        // Set for input
 
     PORTB &= ~(LCD_E|LCD_RS);   // Set E=0, R/W=1, RS=0
     PORTB |= LCD_RW;
@@ -210,7 +210,7 @@ void lcd_wait()
 	PORTB &= ~LCD_E;        //   getting the status register low bits
     } while (bf != 0);          // If Busy (PORTD, bit 7 = 1), loop
 
-    DDRC |= LCD_Data_C;         // Set PORTD bits for output
+    DDRD |= LCD_Data_D;         // Set PORTD bits for output
 #else
     _delay_ms(2);		// Delay for 2ms
 #endif

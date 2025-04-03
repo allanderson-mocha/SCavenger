@@ -50,7 +50,7 @@ void lcd_stringout_P(char *);
   instead of in RAM.
 */
 const unsigned char str1[] PROGMEM = ">> at328-5.c  <<78901234";
-const unsigned char str2[] PROGMEM = ">> USE EE459L <<78901234";
+const unsigned char str2[] PROGMEM = ">> USC EE459L <<78901234";
 
 #define LCD_RS          (1 << PB4)
 #define LCD_RW          (1 << PB3)
@@ -60,21 +60,21 @@ const unsigned char str2[] PROGMEM = ">> USE EE459L <<78901234";
 #define LCD_Data_D     0xf0     // Bits in Port D for LCD data
 #define LCD_Status     0x80     // Bit in Port D for LCD busy status
 
-// int main(void) {
+int main(void) {
 
-//     lcd_init();                 // Initialize the LCD display
+    lcd_init();                 // Initialize the LCD display
 
-//     lcd_moveto(0, 0);
-//     lcd_stringout_P((char *)str1);      // Print string on line 1
+    lcd_moveto(0, 0);
+    lcd_stringout_P((char *)str1);      // Print string on line 1
 
-//     lcd_moveto(1, 0);
-//     lcd_stringout_P((char *)str2);      // Print string on line 2
+    lcd_moveto(1, 0);
+    lcd_stringout_P((char *)str2);      // Print string on line 2
 
-//     while (1) {                 // Loop forever
-//     }
+    while (1) {                 // Loop forever
+    }
 
-//     return 0;   /* never reached */
-// }
+    return 0;   /* never reached */
+}
 
 /*
   lcd_stringout_P - Print the contents of the character string "s" starting at LCD

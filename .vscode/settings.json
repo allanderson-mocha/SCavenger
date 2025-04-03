@@ -1,3 +1,6 @@
 {
-    "C_Cpp.default.compilerPath": "/Users/karlav./Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-gcc"
+    "C_Cpp.default.compilerPath": "/Users/karlav./Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-gcc",
+    "files.associations": {
+        "stdint.h": "c"
+    }
 }

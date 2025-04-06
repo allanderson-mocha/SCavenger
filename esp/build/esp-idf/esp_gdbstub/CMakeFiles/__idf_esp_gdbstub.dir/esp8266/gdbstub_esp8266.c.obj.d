@@ -2,7 +2,7 @@ esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/esp8266/gdbstub_esp8266.c.o
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/esp8266/gdbstub_esp8266.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/uart_register.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_default_types.h \

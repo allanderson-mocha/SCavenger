@@ -2,7 +2,7 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/library/pkcs11.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/pkcs11.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed/limits.h \

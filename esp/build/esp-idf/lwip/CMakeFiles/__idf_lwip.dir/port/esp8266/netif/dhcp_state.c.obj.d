@@ -60,7 +60,7 @@ esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/esp8266/netif/dhcp_state.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/stat.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/vfs/include/sys/ioctl.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_task.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \

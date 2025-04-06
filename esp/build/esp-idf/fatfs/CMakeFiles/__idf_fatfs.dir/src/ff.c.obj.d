@@ -2,7 +2,7 @@ esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/fatfs/src/ff.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/fatfs/src/ff.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/fatfs/src/ffconf.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/param.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/config.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/ieeefp.h \

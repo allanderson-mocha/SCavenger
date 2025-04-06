@@ -1,6 +1,6 @@
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support/src/flash_partitions.c \
- /home/johnnyc/capstone/build/bootloader/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/bootloader/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/string.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \

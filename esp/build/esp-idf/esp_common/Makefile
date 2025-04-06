@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/CMakeFiles /home/johnnyc/capstone/build/esp-idf/esp_common//CMakeFiles/progress.marks
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/CMakeFiles 0
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/CMakeFiles /home/johnnyc/capstone/esp/build/esp-idf/esp_common//CMakeFiles/progress.marks
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/clean
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/preinstall
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/preinstall
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 .PHONY : esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_esp_common: esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/rule
 
 # fast build rule for target.
 __idf_esp_common/fast:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build
 .PHONY : __idf_esp_common/fast
 
 src/esp_err_to_name.obj: src/esp_err_to_name.c.obj
@@ -180,7 +180,7 @@ src/esp_err_to_name.obj: src/esp_err_to_name.c.obj
 
 # target to build an object file
 src/esp_err_to_name.c.obj:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
 .PHONY : src/esp_err_to_name.c.obj
 
 src/esp_err_to_name.i: src/esp_err_to_name.c.i
@@ -188,7 +188,7 @@ src/esp_err_to_name.i: src/esp_err_to_name.c.i
 
 # target to preprocess a source file
 src/esp_err_to_name.c.i:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.i
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.i
 .PHONY : src/esp_err_to_name.c.i
 
 src/esp_err_to_name.s: src/esp_err_to_name.c.s
@@ -196,7 +196,7 @@ src/esp_err_to_name.s: src/esp_err_to_name.c.s
 
 # target to generate assembly for a file
 src/esp_err_to_name.c.s:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.s
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.s
 .PHONY : src/esp_err_to_name.c.s
 
 src/stack_check.obj: src/stack_check.c.obj
@@ -204,7 +204,7 @@ src/stack_check.obj: src/stack_check.c.obj
 
 # target to build an object file
 src/stack_check.c.obj:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.obj
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.obj
 .PHONY : src/stack_check.c.obj
 
 src/stack_check.i: src/stack_check.c.i
@@ -212,7 +212,7 @@ src/stack_check.i: src/stack_check.c.i
 
 # target to preprocess a source file
 src/stack_check.c.i:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.i
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.i
 .PHONY : src/stack_check.c.i
 
 src/stack_check.s: src/stack_check.c.s
@@ -220,7 +220,7 @@ src/stack_check.s: src/stack_check.c.s
 
 # target to generate assembly for a file
 src/stack_check.c.s:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.s
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/build.make esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/stack_check.c.s
 .PHONY : src/stack_check.c.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

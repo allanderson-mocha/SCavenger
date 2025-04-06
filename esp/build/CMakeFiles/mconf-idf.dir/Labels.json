@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/johnnyc/capstone/build/CMakeFiles/mconf-idf"
+			"file" : "/home/johnnyc/capstone/esp/build/CMakeFiles/mconf-idf"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/CMakeFiles/mconf-idf.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/CMakeFiles/mconf-idf.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/CMakeFiles/mconf-idf-complete.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/CMakeFiles/mconf-idf-complete.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule"
 		}
 	],
 	"target" : 

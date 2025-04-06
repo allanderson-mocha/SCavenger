@@ -27,7 +27,7 @@ esp-idf/libsodium/CMakeFiles/__idf_libsodium.dir/port/crypto_hash_mbedtls/crypto
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/libsodium/libsodium/src/libsodium/include/sodium/export.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/sha512.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed/limits.h \

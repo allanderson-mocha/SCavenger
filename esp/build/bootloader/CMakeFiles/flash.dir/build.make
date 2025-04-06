@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 # Utility rule file for flash.
 
@@ -68,7 +68,7 @@ include CMakeFiles/flash.dir/progress.make
 
 CMakeFiles/flash: partition_table
 CMakeFiles/flash: bootloader
-	cd /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/johnnyc/esp/ESP8266_RTOS_SDK" -D ESPTOOLPY="/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266" -D ESPTOOL_ARGS="write_flash @flash_project_args" -D ESPTOOL_WORKING_DIR="/home/johnnyc/capstone/build/bootloader" -P run_esptool.cmake
+	cd /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/johnnyc/esp/ESP8266_RTOS_SDK" -D ESPTOOLPY="/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266" -D ESPTOOL_ARGS="write_flash @flash_project_args" -D ESPTOOL_WORKING_DIR="/home/johnnyc/capstone/esp/build/bootloader" -P run_esptool.cmake
 
 flash: CMakeFiles/flash
 flash: CMakeFiles/flash.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/flash.dir/clean:
 .PHONY : CMakeFiles/flash.dir/clean
 
 CMakeFiles/flash.dir/depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader/CMakeFiles/flash.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles/flash.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/flash.dir/depend
 

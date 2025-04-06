@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 # Utility rule file for gen_project_binary.
 
@@ -69,10 +69,10 @@ include CMakeFiles/gen_project_binary.dir/progress.make
 CMakeFiles/gen_project_binary: .bin_timestamp
 
 .bin_timestamp: bootloader.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB -o /home/johnnyc/capstone/build/bootloader/bootloader.bin bootloader.elf
-	/usr/bin/cmake -E echo "Generated /home/johnnyc/capstone/build/bootloader/bootloader.bin"
-	/usr/bin/cmake -E md5sum /home/johnnyc/capstone/build/bootloader/bootloader.bin > /home/johnnyc/capstone/build/bootloader/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/esp/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB -o /home/johnnyc/capstone/esp/build/bootloader/bootloader.bin bootloader.elf
+	/usr/bin/cmake -E echo "Generated /home/johnnyc/capstone/esp/build/bootloader/bootloader.bin"
+	/usr/bin/cmake -E md5sum /home/johnnyc/capstone/esp/build/bootloader/bootloader.bin > /home/johnnyc/capstone/esp/build/bootloader/.bin_timestamp
 
 gen_project_binary: .bin_timestamp
 gen_project_binary: CMakeFiles/gen_project_binary
@@ -88,6 +88,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

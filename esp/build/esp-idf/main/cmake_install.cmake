@@ -1,4 +1,4 @@
-# Install script for directory: /home/johnnyc/capstone/main
+# Install script for directory: /home/johnnyc/capstone/esp/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

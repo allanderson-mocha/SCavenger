@@ -36,7 +36,7 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/johnnyc/esp/ESP82
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/strings.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/string.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/util_assert.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/errno.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_sha.h \

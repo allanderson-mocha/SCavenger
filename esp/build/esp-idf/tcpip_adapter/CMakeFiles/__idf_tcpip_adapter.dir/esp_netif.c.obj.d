@@ -8,7 +8,7 @@ esp-idf/tcpip_adapter/CMakeFiles/__idf_tcpip_adapter.dir/esp_netif.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_newlib_version.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_intsup.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_stdint.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_wifi_types.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/queue.h \

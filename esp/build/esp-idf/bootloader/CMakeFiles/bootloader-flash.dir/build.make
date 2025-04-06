@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for bootloader-flash.
 
@@ -67,7 +67,7 @@ include esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/compiler_depend.make
 include esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/progress.make
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash:
-	cd /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader && /usr/bin/cmake -D IDF_PATH="/home/johnnyc/esp/ESP8266_RTOS_SDK" -D ESPTOOLPY="/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266" -D ESPTOOL_ARGS="write_flash @flash_bootloader_args" -D ESPTOOL_WORKING_DIR="/home/johnnyc/capstone/build" -P run_esptool.cmake
+	cd /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader && /usr/bin/cmake -D IDF_PATH="/home/johnnyc/esp/ESP8266_RTOS_SDK" -D ESPTOOLPY="/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266" -D ESPTOOL_ARGS="write_flash @flash_bootloader_args" -D ESPTOOL_WORKING_DIR="/home/johnnyc/capstone/esp/build" -P run_esptool.cmake
 
 bootloader-flash: esp-idf/bootloader/CMakeFiles/bootloader-flash
 bootloader-flash: esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build.make
@@ -78,10 +78,10 @@ esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build: bootloader-flash
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/build
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/bootloader && $(CMAKE_COMMAND) -P CMakeFiles/bootloader-flash.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/bootloader && $(CMAKE_COMMAND) -P CMakeFiles/bootloader-flash.dir/cmake_clean.cmake
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/clean
 
 esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/bootloader /home/johnnyc/capstone/build/esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/bootloader /home/johnnyc/capstone/esp/build/esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/bootloader/CMakeFiles/bootloader-flash.dir/depend
 

@@ -46,7 +46,7 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/panic.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \

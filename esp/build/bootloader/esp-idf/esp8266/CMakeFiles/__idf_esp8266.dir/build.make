@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 # Include any dependencies generated for this target.
 include esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/depend.make
@@ -72,44 +72,44 @@ include esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/flags.make
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/flags.make
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj -MF CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj.d -o CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj"
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj -MF CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj.d -o CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.i"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c > CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.i
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c > CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.i
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.s"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c -o CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.s
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/ets_printf.c -o CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.s
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/flags.make
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj -MF CMakeFiles/__idf_esp8266.dir/source/crc.c.obj.d -o CMakeFiles/__idf_esp8266.dir/source/crc.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj"
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj -MF CMakeFiles/__idf_esp8266.dir/source/crc.c.obj.d -o CMakeFiles/__idf_esp8266.dir/source/crc.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp8266.dir/source/crc.c.i"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c > CMakeFiles/__idf_esp8266.dir/source/crc.c.i
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c > CMakeFiles/__idf_esp8266.dir/source/crc.c.i
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp8266.dir/source/crc.c.s"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c -o CMakeFiles/__idf_esp8266.dir/source/crc.c.s
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/crc.c -o CMakeFiles/__idf_esp8266.dir/source/crc.c.s
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/flags.make
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj -MF CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj.d -o CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj"
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj -MF CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj.d -o CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.i"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c > CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.i
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c > CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.i
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.s"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c -o CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.s
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/esp_fast_boot.c -o CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.s
 
 # Object files for target __idf_esp8266
 __idf_esp8266_OBJECTS = \
@@ -125,19 +125,19 @@ esp-idf/esp8266/libesp8266.a: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/sourc
 esp-idf/esp8266/libesp8266.a: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj
 esp-idf/esp8266/libesp8266.a: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make
 esp-idf/esp8266/libesp8266.a: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/johnnyc/capstone/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libesp8266.a"
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp8266.dir/cmake_clean_target.cmake
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp8266.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/johnnyc/capstone/esp/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libesp8266.a"
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp8266.dir/cmake_clean_target.cmake
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp8266.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build: esp-idf/esp8266/libesp8266.a
 .PHONY : esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/clean:
-	cd /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp8266.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp8266.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/clean
 
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266 /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266 /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266 /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266 /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/depend
 

@@ -1,6 +1,6 @@
 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/syscall.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/newlib/src/syscall.c \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdio.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/newlib.h \

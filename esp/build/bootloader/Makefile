@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/bootloader/CMakeFiles /home/johnnyc/capstone/build/bootloader//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles /home/johnnyc/capstone/esp/build/bootloader//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/bootloader/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/os_cpu_a.S" "/home/johnnyc/capstone/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/os_cpu_a.S.obj"
-  "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/xtensa_context.S" "/home/johnnyc/capstone/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/xtensa_context.S.obj"
-  "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/xtensa_vectors.S" "/home/johnnyc/capstone/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/xtensa_vectors.S.obj"
+  "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/os_cpu_a.S" "/home/johnnyc/capstone/esp/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/os_cpu_a.S.obj"
+  "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/xtensa_context.S" "/home/johnnyc/capstone/esp/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/xtensa_context.S.obj"
+  "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/xtensa_vectors.S" "/home/johnnyc/capstone/esp/build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port/esp8266/xtensa_vectors.S.obj"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

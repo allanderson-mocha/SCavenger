@@ -42,7 +42,7 @@ esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/esp_http_client.c.o
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/types.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/stdio.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/include/esp_log.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \

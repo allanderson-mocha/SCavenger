@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 # Utility rule file for confserver.
 
@@ -67,7 +67,7 @@ include CMakeFiles/confserver.dir/compiler_depend.make
 include CMakeFiles/confserver.dir/progress.make
 
 CMakeFiles/confserver:
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confserver.py --env-file /home/johnnyc/capstone/build/bootloader/config.env --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/sdkconfig
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confserver.py --env-file /home/johnnyc/capstone/esp/build/bootloader/config.env --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/esp/sdkconfig
 
 confserver: CMakeFiles/confserver
 confserver: CMakeFiles/confserver.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/confserver.dir/clean:
 .PHONY : CMakeFiles/confserver.dir/clean
 
 CMakeFiles/confserver.dir/depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader/CMakeFiles/confserver.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles/confserver.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/confserver.dir/depend
 

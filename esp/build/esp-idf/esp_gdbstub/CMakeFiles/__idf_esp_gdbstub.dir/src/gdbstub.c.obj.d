@@ -36,4 +36,4 @@ esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/gdbstub.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/esp8266/gdbstub_target_config.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/private_include/esp_gdbstub_common.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h

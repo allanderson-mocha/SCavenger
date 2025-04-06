@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/bootloader/CMakeFiles /home/johnnyc/capstone/build/bootloader/esp-idf/esp8266//CMakeFiles/progress.marks
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/bootloader/CMakeFiles 0
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles /home/johnnyc/capstone/esp/build/bootloader/esp-idf/esp8266//CMakeFiles/progress.marks
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/clean
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/preinstall
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/preinstall
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/rule:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/rule
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/rule
 .PHONY : esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ __idf_esp8266: esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/rule
 
 # fast build rule for target.
 __idf_esp8266/fast:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build
 .PHONY : __idf_esp8266/fast
 
 source/crc.obj: source/crc.c.obj
@@ -135,7 +135,7 @@ source/crc.obj: source/crc.c.obj
 
 # target to build an object file
 source/crc.c.obj:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.obj
 .PHONY : source/crc.c.obj
 
 source/crc.i: source/crc.c.i
@@ -143,7 +143,7 @@ source/crc.i: source/crc.c.i
 
 # target to preprocess a source file
 source/crc.c.i:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.i
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.i
 .PHONY : source/crc.c.i
 
 source/crc.s: source/crc.c.s
@@ -151,7 +151,7 @@ source/crc.s: source/crc.c.s
 
 # target to generate assembly for a file
 source/crc.c.s:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.s
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/crc.c.s
 .PHONY : source/crc.c.s
 
 source/esp_fast_boot.obj: source/esp_fast_boot.c.obj
@@ -159,7 +159,7 @@ source/esp_fast_boot.obj: source/esp_fast_boot.c.obj
 
 # target to build an object file
 source/esp_fast_boot.c.obj:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.obj
 .PHONY : source/esp_fast_boot.c.obj
 
 source/esp_fast_boot.i: source/esp_fast_boot.c.i
@@ -167,7 +167,7 @@ source/esp_fast_boot.i: source/esp_fast_boot.c.i
 
 # target to preprocess a source file
 source/esp_fast_boot.c.i:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.i
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.i
 .PHONY : source/esp_fast_boot.c.i
 
 source/esp_fast_boot.s: source/esp_fast_boot.c.s
@@ -175,7 +175,7 @@ source/esp_fast_boot.s: source/esp_fast_boot.c.s
 
 # target to generate assembly for a file
 source/esp_fast_boot.c.s:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.s
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_fast_boot.c.s
 .PHONY : source/esp_fast_boot.c.s
 
 source/ets_printf.obj: source/ets_printf.c.obj
@@ -183,7 +183,7 @@ source/ets_printf.obj: source/ets_printf.c.obj
 
 # target to build an object file
 source/ets_printf.c.obj:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.obj
 .PHONY : source/ets_printf.c.obj
 
 source/ets_printf.i: source/ets_printf.c.i
@@ -191,7 +191,7 @@ source/ets_printf.i: source/ets_printf.c.i
 
 # target to preprocess a source file
 source/ets_printf.c.i:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.i
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.i
 .PHONY : source/ets_printf.c.i
 
 source/ets_printf.s: source/ets_printf.c.s
@@ -199,7 +199,7 @@ source/ets_printf.s: source/ets_printf.c.s
 
 # target to generate assembly for a file
 source/ets_printf.c.s:
-	cd /home/johnnyc/capstone/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.s
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/build.make esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/ets_printf.c.s
 .PHONY : source/ets_printf.c.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

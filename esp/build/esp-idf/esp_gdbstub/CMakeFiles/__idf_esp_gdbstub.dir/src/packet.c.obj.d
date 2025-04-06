@@ -22,4 +22,4 @@ esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/packet.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core-isa.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/xtensa/config/core-matmap.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_gdbstub/esp8266/gdbstub_target_config.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h

@@ -2,7 +2,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_mbe
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/wpa_supplicant/src/crypto/crypto_mbedtls-rsa.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed/limits.h \

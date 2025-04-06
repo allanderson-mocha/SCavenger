@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 # Utility rule file for size-files.
 
@@ -67,7 +67,7 @@ include CMakeFiles/size-files.dir/compiler_depend.make
 include CMakeFiles/size-files.dir/progress.make
 
 CMakeFiles/size-files: bootloader.elf
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/idf_size.py --files /home/johnnyc/capstone/build/bootloader/bootloader.map
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/idf_size.py --files /home/johnnyc/capstone/esp/build/bootloader/bootloader.map
 
 size-files: CMakeFiles/size-files
 size-files: CMakeFiles/size-files.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/size-files.dir/clean:
 .PHONY : CMakeFiles/size-files.dir/clean
 
 CMakeFiles/size-files.dir/depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader/CMakeFiles/size-files.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles/size-files.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/size-files.dir/depend
 

@@ -49,7 +49,7 @@ esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/string.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/unistd.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/unistd.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/include/esp_log.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \

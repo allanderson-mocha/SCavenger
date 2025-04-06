@@ -38,7 +38,7 @@ esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/esp_timer.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/include/esp_err.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/heap/port/esp8266/include/esp_heap_config.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/include/esp_log.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \

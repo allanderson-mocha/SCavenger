@@ -1,6 +1,6 @@
 esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/reset_reason.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/source/reset_reason.c \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/string.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/newlib.h \

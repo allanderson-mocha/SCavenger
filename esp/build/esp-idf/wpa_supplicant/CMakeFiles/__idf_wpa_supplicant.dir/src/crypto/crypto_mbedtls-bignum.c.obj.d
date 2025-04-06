@@ -38,7 +38,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_mbe
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/types.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/stdio.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/bignum.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \

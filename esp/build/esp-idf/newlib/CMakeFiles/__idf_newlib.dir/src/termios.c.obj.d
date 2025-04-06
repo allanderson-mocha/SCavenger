@@ -1,6 +1,6 @@
 esp-idf/newlib/CMakeFiles/__idf_newlib.dir/src/termios.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/newlib/src/termios.c \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/newlib/platform_include/sys/termios.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \

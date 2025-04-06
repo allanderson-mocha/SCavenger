@@ -4,7 +4,7 @@
 # compile C with /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include -I/home/johnnyc/capstone/build/bootloader/config -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support/include_priv
+C_INCLUDES = -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include -I/home/johnnyc/capstone/esp/build/bootloader/config -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support/include -I/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support/include_priv
 
 C_FLAGS = -mlongcalls -Wno-frame-address
 

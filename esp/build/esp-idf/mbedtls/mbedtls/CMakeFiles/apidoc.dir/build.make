@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for apidoc.
 
@@ -78,10 +78,10 @@ esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/build: apidoc
 .PHONY : esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/build
 
 esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/mbedtls/mbedtls && $(CMAKE_COMMAND) -P CMakeFiles/apidoc.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/mbedtls/mbedtls && $(CMAKE_COMMAND) -P CMakeFiles/apidoc.dir/cmake_clean.cmake
 .PHONY : esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/clean
 
 esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/mbedtls/mbedtls /home/johnnyc/capstone/build/esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/mbedtls/mbedtls /home/johnnyc/capstone/esp/build/esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/mbedtls/mbedtls/CMakeFiles/apidoc.dir/depend
 

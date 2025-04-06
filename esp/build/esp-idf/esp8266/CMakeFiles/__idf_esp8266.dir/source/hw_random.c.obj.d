@@ -45,7 +45,7 @@ esp-idf/esp8266/CMakeFiles/__idf_esp8266.dir/source/hw_random.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/types.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/stdio.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_idf_version.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h

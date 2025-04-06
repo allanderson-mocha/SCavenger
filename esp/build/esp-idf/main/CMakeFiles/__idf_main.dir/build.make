@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Include any dependencies generated for this target.
 include esp-idf/main/CMakeFiles/__idf_main.dir/depend.make
@@ -70,18 +70,18 @@ include esp-idf/main/CMakeFiles/__idf_main.dir/progress.make
 include esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
 
 esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
-esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj: /home/johnnyc/capstone/main/hello_world_main.c
+esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj: /home/johnnyc/capstone/esp/main/hello_world_main.c
 esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/main && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj -MF CMakeFiles/__idf_main.dir/hello_world_main.c.obj.d -o CMakeFiles/__idf_main.dir/hello_world_main.c.obj -c /home/johnnyc/capstone/main/hello_world_main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/main && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj -MF CMakeFiles/__idf_main.dir/hello_world_main.c.obj.d -o CMakeFiles/__idf_main.dir/hello_world_main.c.obj -c /home/johnnyc/capstone/esp/main/hello_world_main.c
 
 esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_main.dir/hello_world_main.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/main && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/capstone/main/hello_world_main.c > CMakeFiles/__idf_main.dir/hello_world_main.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/main && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/capstone/esp/main/hello_world_main.c > CMakeFiles/__idf_main.dir/hello_world_main.c.i
 
 esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/hello_world_main.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/main && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/capstone/main/hello_world_main.c -o CMakeFiles/__idf_main.dir/hello_world_main.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/main && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/capstone/esp/main/hello_world_main.c -o CMakeFiles/__idf_main.dir/hello_world_main.c.s
 
 # Object files for target __idf_main
 __idf_main_OBJECTS = \
@@ -93,19 +93,19 @@ __idf_main_EXTERNAL_OBJECTS =
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/build.make
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmain.a"
-	cd /home/johnnyc/capstone/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
-	cd /home/johnnyc/capstone/build/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmain.a"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/main/CMakeFiles/__idf_main.dir/build: esp-idf/main/libmain.a
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/build
 
 esp-idf/main/CMakeFiles/__idf_main.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean.cmake
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/clean
 
 esp-idf/main/CMakeFiles/__idf_main.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/capstone/main /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/main /home/johnnyc/capstone/build/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp/main /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/main /home/johnnyc/capstone/esp/build/esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/main/CMakeFiles/__idf_main.dir/depend
 

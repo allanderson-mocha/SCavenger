@@ -45,7 +45,7 @@ esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_ops.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \

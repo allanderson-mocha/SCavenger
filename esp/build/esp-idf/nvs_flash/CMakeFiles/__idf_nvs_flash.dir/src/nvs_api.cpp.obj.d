@@ -1,6 +1,6 @@
 esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/nvs_flash/src/nvs_api.cpp \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/nvs_flash/src/nvs.hpp \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/memory \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/bits/stl_algobase.h \

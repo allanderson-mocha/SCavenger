@@ -1,5 +1,5 @@
 esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj: \
- /home/johnnyc/capstone/main/hello_world_main.c \
+ /home/johnnyc/capstone/esp/main/hello_world_main.c \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdio.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/newlib.h \
@@ -36,7 +36,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/_intsup.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdlib.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/stdlib.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/alloca.h \

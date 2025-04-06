@@ -44,7 +44,7 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/src/spi_flash_raw.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/include/priv/esp_spi_flash_raw.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/rom_functions.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/pin_mux_register.h \

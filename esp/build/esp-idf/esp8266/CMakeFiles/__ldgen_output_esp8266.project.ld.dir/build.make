@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for __ldgen_output_esp8266.project.ld.
 
@@ -113,9 +113,9 @@ esp-idf/esp8266/ld/esp8266.project.ld: esp-idf/pthread/libpthread.a
 esp-idf/esp8266/ld/esp8266.project.ld: esp-idf/spi_ram/libspi_ram.a
 esp-idf/esp8266/ld/esp8266.project.ld: esp-idf/spiffs/libspiffs.a
 esp-idf/esp8266/ld/esp8266.project.ld: esp-idf/main/libmain.a
-esp-idf/esp8266/ld/esp8266.project.ld: /home/johnnyc/capstone/sdkconfig
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ld/esp8266.project.ld"
-	cd /home/johnnyc/capstone/build/esp-idf/esp8266 && /home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/ldgen/ldgen.py --config /home/johnnyc/capstone/sdkconfig --fragments /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266_fragments.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266_bss_fragments.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/lwip/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/linker.lf --input /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266.project.ld.in --output /home/johnnyc/capstone/build/esp-idf/esp8266/ld/esp8266.project.ld --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --env-file /home/johnnyc/capstone/build/config.env --libraries-file /home/johnnyc/capstone/build/ldgen_libraries --objdump /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-objdump
+esp-idf/esp8266/ld/esp8266.project.ld: /home/johnnyc/capstone/esp/sdkconfig
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ld/esp8266.project.ld"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/esp8266 && /home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/ldgen/ldgen.py --config /home/johnnyc/capstone/esp/sdkconfig --fragments /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266_fragments.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266_bss_fragments.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/lwip/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/linker.lf	/home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/linker.lf --input /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266.project.ld.in --output /home/johnnyc/capstone/esp/build/esp-idf/esp8266/ld/esp8266.project.ld --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --env-file /home/johnnyc/capstone/esp/build/config.env --libraries-file /home/johnnyc/capstone/esp/build/ldgen_libraries --objdump /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-objdump
 
 __ldgen_output_esp8266.project.ld: esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld
 __ldgen_output_esp8266.project.ld: esp-idf/esp8266/ld/esp8266.project.ld
@@ -127,10 +127,10 @@ esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/build: __ldgen_
 .PHONY : esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/build
 
 esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/__ldgen_output_esp8266.project.ld.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/__ldgen_output_esp8266.project.ld.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/clean
 
 esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266 /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/esp8266 /home/johnnyc/capstone/build/esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266 /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/esp8266 /home/johnnyc/capstone/esp/build/esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp8266/CMakeFiles/__ldgen_output_esp8266.project.ld.dir/depend
 

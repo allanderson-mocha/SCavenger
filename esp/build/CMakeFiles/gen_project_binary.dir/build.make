@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for gen_project_binary.
 
@@ -69,10 +69,10 @@ include CMakeFiles/gen_project_binary.dir/progress.make
 CMakeFiles/gen_project_binary: .bin_timestamp
 
 .bin_timestamp: hello-world.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --version=3 -o /home/johnnyc/capstone/build/hello-world.bin hello-world.elf
-	/usr/bin/cmake -E echo "Generated /home/johnnyc/capstone/build/hello-world.bin"
-	/usr/bin/cmake -E md5sum /home/johnnyc/capstone/build/hello-world.bin > /home/johnnyc/capstone/build/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB --version=3 -o /home/johnnyc/capstone/esp/build/hello-world.bin hello-world.elf
+	/usr/bin/cmake -E echo "Generated /home/johnnyc/capstone/esp/build/hello-world.bin"
+	/usr/bin/cmake -E md5sum /home/johnnyc/capstone/esp/build/hello-world.bin > /home/johnnyc/capstone/esp/build/.bin_timestamp
 
 gen_project_binary: .bin_timestamp
 gen_project_binary: CMakeFiles/gen_project_binary
@@ -88,6 +88,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/capstone /home/johnnyc/capstone/build /home/johnnyc/capstone/build /home/johnnyc/capstone/build/CMakeFiles/gen_project_binary.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/CMakeFiles/gen_project_binary.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

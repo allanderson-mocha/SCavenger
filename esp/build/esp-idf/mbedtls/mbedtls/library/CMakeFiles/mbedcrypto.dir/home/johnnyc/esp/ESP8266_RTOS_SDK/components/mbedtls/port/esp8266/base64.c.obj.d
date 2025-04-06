@@ -1,6 +1,6 @@
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/esp8266/base64.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/esp8266/base64.c \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/esp8266/esp_base64.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \

@@ -21,7 +21,7 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/johnnyc/esp/ESP82
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/string.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/sha1.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include-fixed/limits.h \

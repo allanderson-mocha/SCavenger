@@ -11,7 +11,7 @@ esp-idf/openssl/CMakeFiles/__idf_openssl.dir/library/ssl_cert.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/openssl/include/internal/ssl_stack.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/openssl/include/internal/ssl_dbg.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/openssl/include/platform/ssl_opt.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/openssl/include/platform/ssl_port.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_types.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/cdefs.h \

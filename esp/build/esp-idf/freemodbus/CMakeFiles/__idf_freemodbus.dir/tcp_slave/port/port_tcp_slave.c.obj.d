@@ -49,7 +49,7 @@ esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/signal.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_time.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/tcpip_adapter/include/esp_netif.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_wifi_types.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/sys/queue.h \

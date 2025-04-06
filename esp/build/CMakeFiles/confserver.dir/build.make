@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for confserver.
 
@@ -67,7 +67,7 @@ include CMakeFiles/confserver.dir/compiler_depend.make
 include CMakeFiles/confserver.dir/progress.make
 
 CMakeFiles/confserver:
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confserver.py --env-file /home/johnnyc/capstone/build/config.env --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/sdkconfig
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confserver.py --env-file /home/johnnyc/capstone/esp/build/config.env --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/esp/sdkconfig
 
 confserver: CMakeFiles/confserver
 confserver: CMakeFiles/confserver.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/confserver.dir/clean:
 .PHONY : CMakeFiles/confserver.dir/clean
 
 CMakeFiles/confserver.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/capstone /home/johnnyc/capstone/build /home/johnnyc/capstone/build /home/johnnyc/capstone/build/CMakeFiles/confserver.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/CMakeFiles/confserver.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/confserver.dir/depend
 

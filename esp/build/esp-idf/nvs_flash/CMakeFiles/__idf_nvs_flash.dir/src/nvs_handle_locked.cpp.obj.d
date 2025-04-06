@@ -183,7 +183,7 @@ esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.obj: 
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/nvs_flash/src/nvs_platform.hpp \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/8.4.0/stdlib.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \

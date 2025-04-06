@@ -39,7 +39,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/esp_supplicant/es
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/wpa_supplicant/src/utils/includes.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/wpa_supplicant/port/include/supplicant_opt.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \

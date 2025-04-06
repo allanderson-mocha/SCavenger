@@ -50,7 +50,7 @@ esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-omac1.
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_libc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/heap/port/esp8266/include/esp_heap_config.h \

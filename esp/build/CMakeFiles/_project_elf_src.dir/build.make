@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for _project_elf_src.
 
@@ -69,8 +69,8 @@ include CMakeFiles/_project_elf_src.dir/progress.make
 CMakeFiles/_project_elf_src: project_elf_src.c
 
 project_elf_src.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src.c"
-	/usr/bin/cmake -E touch /home/johnnyc/capstone/build/project_elf_src.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src.c"
+	/usr/bin/cmake -E touch /home/johnnyc/capstone/esp/build/project_elf_src.c
 
 _project_elf_src: CMakeFiles/_project_elf_src
 _project_elf_src: project_elf_src.c
@@ -86,6 +86,6 @@ CMakeFiles/_project_elf_src.dir/clean:
 .PHONY : CMakeFiles/_project_elf_src.dir/clean
 
 CMakeFiles/_project_elf_src.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/capstone /home/johnnyc/capstone/build /home/johnnyc/capstone/build /home/johnnyc/capstone/build/CMakeFiles/_project_elf_src.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/CMakeFiles/_project_elf_src.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/_project_elf_src.dir/depend
 

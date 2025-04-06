@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Include any dependencies generated for this target.
 include esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/depend.make
@@ -72,422 +72,422 @@ include esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c > CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c > CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c -o CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb.c -o CMakeFiles/__idf_freemodbus.dir/modbus/mb.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/mb_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/mb_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c > CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c > CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp.c -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/tcp/mbtcp_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/tcp/mbtcp_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/port.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/port.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/port.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/port.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/port.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c > CMakeFiles/__idf_freemodbus.dir/port/port.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c > CMakeFiles/__idf_freemodbus.dir/port/port.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/port.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c -o CMakeFiles/__idf_freemodbus.dir/port/port.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.c -o CMakeFiles/__idf_freemodbus.dir/port/port.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portevent.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/portevent.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c > CMakeFiles/__idf_freemodbus.dir/port/portevent.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c > CMakeFiles/__idf_freemodbus.dir/port/portevent.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/portevent.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c -o CMakeFiles/__idf_freemodbus.dir/port/portevent.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent.c -o CMakeFiles/__idf_freemodbus.dir/port/portevent.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c > CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c > CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c -o CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c -o CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portother.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/portother.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c > CMakeFiles/__idf_freemodbus.dir/port/portother.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c > CMakeFiles/__idf_freemodbus.dir/port/portother.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/portother.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c -o CMakeFiles/__idf_freemodbus.dir/port/portother.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother.c -o CMakeFiles/__idf_freemodbus.dir/port/portother.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c > CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c > CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c -o CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portother_m.c -o CMakeFiles/__idf_freemodbus.dir/port/portother_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c > CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c > CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c -o CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer.c -o CMakeFiles/__idf_freemodbus.dir/port/porttimer.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c > CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c > CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c -o CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/porttimer_m.c -o CMakeFiles/__idf_freemodbus.dir/port/porttimer_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfunccoils_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfunccoils_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdiag.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdiag.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncdisc_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncdisc_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncholding_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncholding_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncinput_m.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncinput_m.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbfuncother.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbfuncother.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj -MF CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c > CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/functions/mbutils.c -o CMakeFiles/__idf_freemodbus.dir/modbus/functions/mbutils.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c > CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c > CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/port/port_tcp_slave.c -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/port/port_tcp_slave.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c > CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c > CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c -o CMakeFiles/__idf_freemodbus.dir/tcp_slave/modbus_controller/mbc_tcp_slave.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c > CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c > CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c -o CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c -o CMakeFiles/__idf_freemodbus.dir/tcp_master/modbus_controller/mbc_tcp_master.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj -MF CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c > CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c > CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c -o CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/tcp_master/port/port_tcp_master.c -o CMakeFiles/__idf_freemodbus.dir/tcp_master/port/port_tcp_master.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_master_tcp.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_master_tcp.c.s
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/flags.make
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj -MF CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj.d -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.i"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c > CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.i
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.s"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/common/esp_modbus_slave_tcp.c -o CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.s
 
 # Object files for target __idf_freemodbus
 __idf_freemodbus_OBJECTS = \
@@ -557,19 +557,19 @@ esp-idf/freemodbus/libfreemodbus.a: esp-idf/freemodbus/CMakeFiles/__idf_freemodb
 esp-idf/freemodbus/libfreemodbus.a: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/common/esp_modbus_slave_tcp.c.obj
 esp-idf/freemodbus/libfreemodbus.a: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/build.make
 esp-idf/freemodbus/libfreemodbus.a: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX static library libfreemodbus.a"
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && $(CMAKE_COMMAND) -P CMakeFiles/__idf_freemodbus.dir/cmake_clean_target.cmake
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_freemodbus.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX static library libfreemodbus.a"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && $(CMAKE_COMMAND) -P CMakeFiles/__idf_freemodbus.dir/cmake_clean_target.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_freemodbus.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/build: esp-idf/freemodbus/libfreemodbus.a
 .PHONY : esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/build
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/freemodbus && $(CMAKE_COMMAND) -P CMakeFiles/__idf_freemodbus.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/freemodbus && $(CMAKE_COMMAND) -P CMakeFiles/__idf_freemodbus.dir/cmake_clean.cmake
 .PHONY : esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/clean
 
 esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/freemodbus /home/johnnyc/capstone/build/esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/freemodbus /home/johnnyc/capstone/esp/build/esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/depend
 

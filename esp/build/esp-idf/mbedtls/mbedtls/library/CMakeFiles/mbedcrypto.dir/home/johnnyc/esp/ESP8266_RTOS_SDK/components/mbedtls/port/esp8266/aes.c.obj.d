@@ -28,5 +28,5 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/johnnyc/esp/ESP82
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/ibus_data.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_attr.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/util_assert.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/assert.h

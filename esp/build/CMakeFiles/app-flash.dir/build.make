@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for app-flash.
 
@@ -67,7 +67,7 @@ include CMakeFiles/app-flash.dir/compiler_depend.make
 include CMakeFiles/app-flash.dir/progress.make
 
 CMakeFiles/app-flash:
-	cd /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/johnnyc/esp/ESP8266_RTOS_SDK" -D ESPTOOLPY="/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266" -D ESPTOOL_ARGS="write_flash @flash_app_args" -D ESPTOOL_WORKING_DIR="/home/johnnyc/capstone/build" -P run_esptool.cmake
+	cd /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py && /usr/bin/cmake -D IDF_PATH="/home/johnnyc/esp/ESP8266_RTOS_SDK" -D ESPTOOLPY="/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/esptool/esptool.py --chip esp8266" -D ESPTOOL_ARGS="write_flash @flash_app_args" -D ESPTOOL_WORKING_DIR="/home/johnnyc/capstone/esp/build" -P run_esptool.cmake
 
 app-flash: CMakeFiles/app-flash
 app-flash: CMakeFiles/app-flash.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/app-flash.dir/clean:
 .PHONY : CMakeFiles/app-flash.dir/clean
 
 CMakeFiles/app-flash.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/capstone /home/johnnyc/capstone/build /home/johnnyc/capstone/build /home/johnnyc/capstone/build/CMakeFiles/app-flash.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/CMakeFiles/app-flash.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/app-flash.dir/depend
 

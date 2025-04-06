@@ -2,7 +2,7 @@ esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/port/portevent_m.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/portevent_m.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/include/mb_m.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/modbus/include/mbconfig.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freemodbus/port/port.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stddef.h \

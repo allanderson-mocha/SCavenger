@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject",
-    "build_dir":          "/home/johnnyc/capstone/build/bootloader",
-    "config_file":        "/home/johnnyc/capstone/sdkconfig",
+    "build_dir":          "/home/johnnyc/capstone/esp/build/bootloader",
+    "config_file":        "/home/johnnyc/capstone/esp/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",

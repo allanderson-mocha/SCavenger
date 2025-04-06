@@ -50,7 +50,7 @@ esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_wifi.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/include/freertos/FreeRTOS.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/freertos/port/esp8266/include/freertos/FreeRTOSConfig.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdlib.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/stdlib.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/alloca.h \

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for esp8266_linker_script.
 
@@ -69,8 +69,8 @@ include esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/progress.make
 esp-idf/esp8266/CMakeFiles/esp8266_linker_script: esp-idf/esp8266/esp8266_out.ld
 
 esp-idf/esp8266/esp8266_out.ld: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266.ld
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating memory map linker script..."
-	cd /home/johnnyc/capstone/build/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -C -P -x c -E -o esp8266_out.ld -DAPP_OFFSET=0x10000 -DAPP_SIZE=0xf0000 -I /home/johnnyc/capstone/build/config /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266.ld
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating memory map linker script..."
+	cd /home/johnnyc/capstone/esp/build/esp-idf/esp8266 && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -C -P -x c -E -o esp8266_out.ld -DAPP_OFFSET=0x10000 -DAPP_SIZE=0xf0000 -I /home/johnnyc/capstone/esp/build/config /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/ld/esp8266.ld
 
 esp8266_linker_script: esp-idf/esp8266/CMakeFiles/esp8266_linker_script
 esp8266_linker_script: esp-idf/esp8266/esp8266_out.ld
@@ -82,10 +82,10 @@ esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/build: esp8266_linker_scrip
 .PHONY : esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/build
 
 esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/esp8266_linker_script.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/esp8266 && $(CMAKE_COMMAND) -P CMakeFiles/esp8266_linker_script.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/clean
 
 esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266 /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/esp8266 /home/johnnyc/capstone/build/esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266 /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/esp8266 /home/johnnyc/capstone/esp/build/esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/esp8266/CMakeFiles/esp8266_linker_script.dir/depend
 

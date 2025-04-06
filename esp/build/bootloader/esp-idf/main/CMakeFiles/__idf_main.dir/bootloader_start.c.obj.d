@@ -1,6 +1,6 @@
 esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject/main/bootloader_start.c \
- /home/johnnyc/capstone/build/bootloader/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/bootloader/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/string.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/_ansi.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/newlib.h \

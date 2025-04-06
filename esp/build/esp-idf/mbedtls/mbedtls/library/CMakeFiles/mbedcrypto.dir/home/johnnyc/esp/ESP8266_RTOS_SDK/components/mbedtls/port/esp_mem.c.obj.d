@@ -2,7 +2,7 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/johnnyc/esp/ESP82
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/mbedtls/port/esp_mem.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_attr.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/heap/include/esp_heap_caps.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/machine/_default_types.h \

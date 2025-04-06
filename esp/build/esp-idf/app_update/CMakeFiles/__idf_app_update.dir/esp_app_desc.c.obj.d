@@ -47,4 +47,4 @@ esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/include/esp_spi_flash.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader_support/include/esp_app_format.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp_attr.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h

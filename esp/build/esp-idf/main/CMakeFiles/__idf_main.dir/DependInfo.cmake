@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/johnnyc/capstone/main/hello_world_main.c" "esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj.d"
+  "/home/johnnyc/capstone/esp/main/hello_world_main.c" "esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/hello_world_main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

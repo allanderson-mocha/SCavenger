@@ -31,7 +31,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/johnnyc/capstone/build/CMakeFiles/3.28.3/CompilerIdC/a.out
+        /home/johnnyc/capstone/esp/build/CMakeFiles/3.28.3/CompilerIdC/a.out
       
   -
     kind: "message-v1"
@@ -54,7 +54,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/johnnyc/capstone/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+        /home/johnnyc/capstone/esp/build/CMakeFiles/3.28.3/CompilerIdCXX/a.out
       
   -
     kind: "message-v1"
@@ -80,8 +80,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l"
-      binary: "/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l"
+      source: "/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1"
+      binary: "/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mlongcalls -Wno-frame-address"
       CMAKE_EXE_LINKER_FLAGS: "-nostdlib -Wl,--gc-sections"
@@ -90,21 +90,21 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l'
+        Change Dir: '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_786b4/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_786b4.dir/build.make CMakeFiles/cmTC_786b4.dir/build
-        gmake[1]: Entering directory '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l'
-        Building C object CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj
-        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d5ca4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d5ca4.dir/build.make CMakeFiles/cmTC_d5ca4.dir/build
+        gmake[1]: Entering directory '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1'
+        Building C object CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj
+        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
         Target: xtensa-lx106-elf
         Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes
         Thread model: posix
         gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj' '-c'
-         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1 -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlongcalls -auxbase-strip CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj -Wno-frame-address -version -o /tmp/ccA9nhGF.s
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj' '-c'
+         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1 -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlongcalls -auxbase-strip CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj -Wno-frame-address -version -o /tmp/ccsRFgWM.s
         GNU C17 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)
         	compiled by GNU C version 4.9.2, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
         
@@ -125,14 +125,14 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 48e58fa3e6eb2de9fad439857fcdf42a
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj' '-c'
-         /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj /tmp/ccA9nhGF.s
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj' '-c'
+         /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj /tmp/ccsRFgWM.s
         COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
         LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj' '-c'
-        Linking C executable cmTC_786b4
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_786b4.dir/link.txt --verbose=1
-        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -mlongcalls -Wno-frame-address  -nostdlib -Wl,--gc-sections -v CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj -o cmTC_786b4 
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj' '-c'
+        Linking C executable cmTC_d5ca4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5ca4.dir/link.txt --verbose=1
+        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -mlongcalls -Wno-frame-address  -nostdlib -Wl,--gc-sections -v CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj -o cmTC_d5ca4 
         Using built-in specs.
         COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
         COLLECT_LTO_WRAPPER=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper
@@ -142,11 +142,11 @@ events:
         gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
         COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
         LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_786b4'
-         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNZ1edd.res -o cmTC_786b4 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_d5ca4'
+         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuoamfB.res -o cmTC_d5ca4 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj
         /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_786b4'
-        gmake[1]: Leaving directory '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l'
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_d5ca4'
+        gmake[1]: Leaving directory '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1'
         
       exitCode: 0
   -
@@ -182,21 +182,21 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(xtensa-lx106-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l']
+        ignore line: [Change Dir: '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_786b4/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_786b4.dir/build.make CMakeFiles/cmTC_786b4.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-wnei7l']
-        ignore line: [Building C object CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d5ca4/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_d5ca4.dir/build.make CMakeFiles/cmTC_d5ca4.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-fzHrm1']
+        ignore line: [Building C object CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc]
         ignore line: [Target: xtensa-lx106-elf]
         ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj' '-c']
-        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1 -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlongcalls -auxbase-strip CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj -Wno-frame-address -version -o /tmp/ccA9nhGF.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj' '-c']
+        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1 -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlongcalls -auxbase-strip CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj -Wno-frame-address -version -o /tmp/ccsRFgWM.s]
         ignore line: [GNU C17 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)]
         ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.19-GMP]
         ignore line: []
@@ -217,14 +217,14 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 48e58fa3e6eb2de9fad439857fcdf42a]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj' '-c']
-        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj /tmp/ccA9nhGF.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj' '-c']
+        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj /tmp/ccsRFgWM.s]
         ignore line: [COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj' '-c']
-        ignore line: [Linking C executable cmTC_786b4]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_786b4.dir/link.txt --verbose=1]
-        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -mlongcalls -Wno-frame-address  -nostdlib -Wl --gc-sections -v CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj -o cmTC_786b4 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj' '-c']
+        ignore line: [Linking C executable cmTC_d5ca4]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5ca4.dir/link.txt --verbose=1]
+        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc -mlongcalls -Wno-frame-address  -nostdlib -Wl --gc-sections -v CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj -o cmTC_d5ca4 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper]
@@ -234,20 +234,20 @@ events:
         ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
         ignore line: [COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_786b4']
-        link line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNZ1edd.res -o cmTC_786b4 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_d5ca4']
+        link line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccuoamfB.res -o cmTC_d5ca4 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj]
           arg [/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccNZ1edd.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccuoamfB.res] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_786b4] ==> ignore
+          arg [cmTC_d5ca4] ==> ignore
           arg [-L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0]
           arg [-L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc]
           arg [-L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib]
           arg [--gc-sections] ==> ignore
-          arg [CMakeFiles/cmTC_786b4.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_d5ca4.dir/CMakeCCompilerABI.c.obj] ==> ignore
         collapse library dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> [/home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0]
         collapse library dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> [/home/johnnyc/esp/xtensa-lx106-elf/lib/gcc]
         collapse library dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> [/home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib]
@@ -267,8 +267,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy"
-      binary: "/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy"
+      source: "/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG"
+      binary: "/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mlongcalls -Wno-frame-address"
       CMAKE_EXE_LINKER_FLAGS: "-nostdlib -Wl,--gc-sections"
@@ -277,21 +277,21 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy'
+        Change Dir: '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b7397/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_b7397.dir/build.make CMakeFiles/cmTC_b7397.dir/build
-        gmake[1]: Entering directory '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy'
-        Building CXX object CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj
-        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_88556/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_88556.dir/build.make CMakeFiles/cmTC_88556.dir/build
+        gmake[1]: Entering directory '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG'
+        Building CXX object CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++
         Target: xtensa-lx106-elf
         Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes
         Thread model: posix
         gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj' '-c'
-         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1plus -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlongcalls -auxbase-strip CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj -Wno-frame-address -version -o /tmp/ccDZovm8.s
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj' '-c'
+         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1plus -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlongcalls -auxbase-strip CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj -Wno-frame-address -version -o /tmp/ccrnZRvL.s
         GNU C++14 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)
         	compiled by GNU C version 4.9.2, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.19-GMP
         
@@ -318,14 +318,14 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 6a42b2f4729ac0ea49ccdcd6bf20e2e4
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj' '-c'
-         /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccDZovm8.s
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj' '-c'
+         /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccrnZRvL.s
         COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
         LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj' '-c'
-        Linking CXX executable cmTC_b7397
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7397.dir/link.txt --verbose=1
-        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++ -mlongcalls -Wno-frame-address  -nostdlib -Wl,--gc-sections -v CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_b7397 
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj' '-c'
+        Linking CXX executable cmTC_88556
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88556.dir/link.txt --verbose=1
+        /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++ -mlongcalls -Wno-frame-address  -nostdlib -Wl,--gc-sections -v CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_88556 
         Using built-in specs.
         COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++
         COLLECT_LTO_WRAPPER=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper
@@ -335,11 +335,11 @@ events:
         gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) 
         COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/
         LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_b7397'
-         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccy6mdZD.res -o cmTC_b7397 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_88556'
+         /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNLw4tN.res -o cmTC_88556 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj
         /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/ld: warning: cannot find entry symbol _start; not setting start address
-        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_b7397'
-        gmake[1]: Leaving directory '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy'
+        COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_88556'
+        gmake[1]: Leaving directory '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG'
         
       exitCode: 0
   -
@@ -381,21 +381,21 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(xtensa-lx106-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy']
+        ignore line: [Change Dir: '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b7397/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_b7397.dir/build.make CMakeFiles/cmTC_b7397.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/johnnyc/capstone/build/CMakeFiles/CMakeScratch/TryCompile-rx2eNy']
-        ignore line: [Building CXX object CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_88556/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_88556.dir/build.make CMakeFiles/cmTC_88556.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/johnnyc/capstone/esp/build/CMakeFiles/CMakeScratch/TryCompile-ofS4wG']
+        ignore line: [Building CXX object CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++   -mlongcalls -Wno-frame-address    -v -o CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++]
         ignore line: [Target: xtensa-lx106-elf]
         ignore line: [Configured with: /builds/idf/crosstool-NG/.build/xtensa-lx106-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=xtensa-lx106-elf --prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf --with-local-prefix=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf --with-headers=/builds/idf/crosstool-NG/builds/xtensa-lx106-elf/xtensa-lx106-elf/include --with-newlib --enable-threads=no --disable-shared --with-pkgversion='crosstool-NG esp-2020r3-49-gd5524c1' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --with-gmp=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpfr=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-mpc=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --with-isl=/builds/idf/crosstool-NG/.build/xtensa-lx106-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-libstdcxx-time=yes]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj' '-c']
-        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1plus -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlongcalls -auxbase-strip CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj -Wno-frame-address -version -o /tmp/ccDZovm8.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj' '-c']
+        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/cc1plus -quiet -v -iprefix /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mlongcalls -auxbase-strip CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj -Wno-frame-address -version -o /tmp/ccrnZRvL.s]
         ignore line: [GNU C++14 (crosstool-NG esp-2020r3-49-gd5524c1) version 8.4.0 (xtensa-lx106-elf)]
         ignore line: [	compiled by GNU C version 4.9.2  GMP version 6.1.2  MPFR version 4.0.1  MPC version 1.1.0  isl version isl-0.19-GMP]
         ignore line: []
@@ -422,14 +422,14 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 6a42b2f4729ac0ea49ccdcd6bf20e2e4]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj' '-c']
-        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccDZovm8.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj' '-c']
+        ignore line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/as --traditional-format --longcalls -o CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccrnZRvL.s]
         ignore line: [COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj' '-c']
-        ignore line: [Linking CXX executable cmTC_b7397]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7397.dir/link.txt --verbose=1]
-        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++ -mlongcalls -Wno-frame-address  -nostdlib -Wl --gc-sections -v CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_b7397 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-v' '-o' 'CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj' '-c']
+        ignore line: [Linking CXX executable cmTC_88556]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88556.dir/link.txt --verbose=1]
+        ignore line: [/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++ -mlongcalls -Wno-frame-address  -nostdlib -Wl --gc-sections -v CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_88556 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper]
@@ -439,20 +439,20 @@ events:
         ignore line: [gcc version 8.4.0 (crosstool-NG esp-2020r3-49-gd5524c1) ]
         ignore line: [COMPILER_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/bin/]
         ignore line: [LIBRARY_PATH=/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/:/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_b7397']
-        link line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccy6mdZD.res -o cmTC_b7397 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mlongcalls' '-Wno-frame-address' '-nostdlib' '-v' '-o' 'cmTC_88556']
+        link line: [ /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2 -plugin /home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so -plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNLw4tN.res -o cmTC_88556 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0 -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc -L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib --gc-sections CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj]
           arg [/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/home/johnnyc/esp/xtensa-lx106-elf/bin/../libexec/gcc/xtensa-lx106-elf/8.4.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccy6mdZD.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccNLw4tN.res] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_b7397] ==> ignore
+          arg [cmTC_88556] ==> ignore
           arg [-L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0]
           arg [-L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc]
           arg [-L/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib]
           arg [--gc-sections] ==> ignore
-          arg [CMakeFiles/cmTC_b7397.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_88556.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
         collapse library dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0] ==> [/home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0]
         collapse library dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc] ==> [/home/johnnyc/esp/xtensa-lx106-elf/lib/gcc]
         collapse library dir [/home/johnnyc/esp/xtensa-lx106-elf/bin/../lib/gcc/xtensa-lx106-elf/8.4.0/../../../../xtensa-lx106-elf/lib] ==> [/home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/lib]

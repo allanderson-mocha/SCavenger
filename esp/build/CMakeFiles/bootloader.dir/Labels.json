@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/johnnyc/capstone/build/CMakeFiles/bootloader"
+			"file" : "/home/johnnyc/capstone/esp/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/johnnyc/capstone/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/johnnyc/capstone/esp/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for partition_table.
 
@@ -70,8 +70,8 @@ esp-idf/partition_table/CMakeFiles/partition_table: partition_table/partition-ta
 
 partition_table/partition-table.bin: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/partitions_singleapp.csv
 partition_table/partition-table.bin: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/gen_esp32part.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
-	cd /home/johnnyc/capstone/build/esp-idf/partition_table && /home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/gen_esp32part.py -q --offset 0x8000 --disable-md5sum --flash-size 2MB /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/partitions_singleapp.csv /home/johnnyc/capstone/build/partition_table/partition-table.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
+	cd /home/johnnyc/capstone/esp/build/esp-idf/partition_table && /home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/gen_esp32part.py -q --offset 0x8000 --disable-md5sum --flash-size 2MB /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/partitions_singleapp.csv /home/johnnyc/capstone/esp/build/partition_table/partition-table.bin
 
 partition_table: esp-idf/partition_table/CMakeFiles/partition_table
 partition_table: partition_table/partition-table.bin
@@ -83,10 +83,10 @@ esp-idf/partition_table/CMakeFiles/partition_table.dir/build: partition_table
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table.dir/build
 
 esp-idf/partition_table/CMakeFiles/partition_table.dir/clean:
-	cd /home/johnnyc/capstone/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition_table.dir/cmake_clean.cmake
+	cd /home/johnnyc/capstone/esp/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition_table.dir/cmake_clean.cmake
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table.dir/clean
 
 esp-idf/partition_table/CMakeFiles/partition_table.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table /home/johnnyc/capstone/build /home/johnnyc/capstone/build/esp-idf/partition_table /home/johnnyc/capstone/build/esp-idf/partition_table/CMakeFiles/partition_table.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/esp-idf/partition_table /home/johnnyc/capstone/esp/build/esp-idf/partition_table/CMakeFiles/partition_table.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table.dir/depend
 

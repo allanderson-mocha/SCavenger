@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 # Utility rule file for size-components.
 
@@ -67,7 +67,7 @@ include CMakeFiles/size-components.dir/compiler_depend.make
 include CMakeFiles/size-components.dir/progress.make
 
 CMakeFiles/size-components: hello-world.elf
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/idf_size.py --archives /home/johnnyc/capstone/build/hello-world.map
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/idf_size.py --archives /home/johnnyc/capstone/esp/build/hello-world.map
 
 size-components: CMakeFiles/size-components
 size-components: CMakeFiles/size-components.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/size-components.dir/clean:
 .PHONY : CMakeFiles/size-components.dir/clean
 
 CMakeFiles/size-components.dir/depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone /home/johnnyc/capstone /home/johnnyc/capstone/build /home/johnnyc/capstone/build /home/johnnyc/capstone/build/CMakeFiles/size-components.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build /home/johnnyc/capstone/esp/build/CMakeFiles/size-components.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/size-components.dir/depend
 

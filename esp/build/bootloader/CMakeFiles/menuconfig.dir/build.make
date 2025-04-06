@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build/bootloader
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build/bootloader
 
 # Utility rule file for menuconfig.
 
@@ -67,9 +67,9 @@ include CMakeFiles/menuconfig.dir/compiler_depend.make
 include CMakeFiles/menuconfig.dir/progress.make
 
 CMakeFiles/menuconfig:
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confgen.py --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/sdkconfig --env-file /home/johnnyc/capstone/build/bootloader/config.env --env IDF_TARGET=esp8266 --output config /home/johnnyc/capstone/sdkconfig
-	/usr/bin/cmake -E env COMPONENT_KCONFIGS=/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/Kconfig\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/Kconfig\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/Kconfig\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/Kconfig COMPONENT_KCONFIGS_PROJBUILD=/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/Kconfig.projbuild\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/Kconfig.projbuild\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/Kconfig.projbuild IDF_CMAKE=y KCONFIG_CONFIG=/home/johnnyc/capstone/sdkconfig IDF_TARGET=esp8266 /home/johnnyc/capstone/build/bootloader/kconfig_bin/mconf-idf /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig
-	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confgen.py --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/sdkconfig --env-file /home/johnnyc/capstone/build/bootloader/config.env --env IDF_TARGET=esp8266 --output config /home/johnnyc/capstone/sdkconfig
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confgen.py --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/esp/sdkconfig --env-file /home/johnnyc/capstone/esp/build/bootloader/config.env --env IDF_TARGET=esp8266 --output config /home/johnnyc/capstone/esp/sdkconfig
+	/usr/bin/cmake -E env COMPONENT_KCONFIGS=/home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/Kconfig\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp_common/Kconfig\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/Kconfig\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/Kconfig COMPONENT_KCONFIGS_PROJBUILD=/home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/Kconfig.projbuild\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esptool_py/Kconfig.projbuild\ /home/johnnyc/esp/ESP8266_RTOS_SDK/components/partition_table/Kconfig.projbuild IDF_CMAKE=y KCONFIG_CONFIG=/home/johnnyc/capstone/esp/sdkconfig IDF_TARGET=esp8266 /home/johnnyc/capstone/esp/build/bootloader/kconfig_bin/mconf-idf /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig
+	/home/johnnyc/capstone/.venv/bin/python /home/johnnyc/esp/ESP8266_RTOS_SDK/tools/kconfig_new/confgen.py --kconfig /home/johnnyc/esp/ESP8266_RTOS_SDK/Kconfig --config /home/johnnyc/capstone/esp/sdkconfig --env-file /home/johnnyc/capstone/esp/build/bootloader/config.env --env IDF_TARGET=esp8266 --output config /home/johnnyc/capstone/esp/sdkconfig
 
 menuconfig: CMakeFiles/menuconfig
 menuconfig: CMakeFiles/menuconfig.dir/build.make
@@ -84,6 +84,6 @@ CMakeFiles/menuconfig.dir/clean:
 .PHONY : CMakeFiles/menuconfig.dir/clean
 
 CMakeFiles/menuconfig.dir/depend:
-	cd /home/johnnyc/capstone/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader /home/johnnyc/capstone/build/bootloader/CMakeFiles/menuconfig.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/johnnyc/capstone/esp/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/esp/ESP8266_RTOS_SDK/components/bootloader/subproject /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader /home/johnnyc/capstone/esp/build/bootloader/CMakeFiles/menuconfig.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/menuconfig.dir/depend
 

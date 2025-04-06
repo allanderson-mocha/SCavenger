@@ -50,7 +50,7 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/src/partition.c.obj: \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdbool.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/spi_flash/include/esp_spi_flash.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/log/include/esp_log.h \
- /home/johnnyc/capstone/build/bootloader/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/bootloader/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/esp8266/eagle_soc.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/driver/soc.h \

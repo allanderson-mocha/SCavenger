@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnnyc/capstone
+CMAKE_SOURCE_DIR = /home/johnnyc/capstone/esp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnnyc/capstone/build
+CMAKE_BINARY_DIR = /home/johnnyc/capstone/esp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/CMakeFiles /home/johnnyc/capstone/build/esp-idf/spi_ram//CMakeFiles/progress.marks
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/build/CMakeFiles 0
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/CMakeFiles /home/johnnyc/capstone/esp/build/esp-idf/spi_ram//CMakeFiles/progress.marks
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnnyc/capstone/esp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/clean
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/preinstall
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/preinstall
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/rule:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/rule
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/rule
 .PHONY : esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_spi_ram: esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/rule
 
 # fast build rule for target.
 __idf_spi_ram/fast:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build
 .PHONY : __idf_spi_ram/fast
 
 spi_ram.obj: spi_ram.c.obj
@@ -180,7 +180,7 @@ spi_ram.obj: spi_ram.c.obj
 
 # target to build an object file
 spi_ram.c.obj:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram.c.obj
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram.c.obj
 .PHONY : spi_ram.c.obj
 
 spi_ram.i: spi_ram.c.i
@@ -188,7 +188,7 @@ spi_ram.i: spi_ram.c.i
 
 # target to preprocess a source file
 spi_ram.c.i:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram.c.i
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram.c.i
 .PHONY : spi_ram.c.i
 
 spi_ram.s: spi_ram.c.s
@@ -196,7 +196,7 @@ spi_ram.s: spi_ram.c.s
 
 # target to generate assembly for a file
 spi_ram.c.s:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram.c.s
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram.c.s
 .PHONY : spi_ram.c.s
 
 spi_ram_fifo.obj: spi_ram_fifo.c.obj
@@ -204,7 +204,7 @@ spi_ram_fifo.obj: spi_ram_fifo.c.obj
 
 # target to build an object file
 spi_ram_fifo.c.obj:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram_fifo.c.obj
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram_fifo.c.obj
 .PHONY : spi_ram_fifo.c.obj
 
 spi_ram_fifo.i: spi_ram_fifo.c.i
@@ -212,7 +212,7 @@ spi_ram_fifo.i: spi_ram_fifo.c.i
 
 # target to preprocess a source file
 spi_ram_fifo.c.i:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram_fifo.c.i
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram_fifo.c.i
 .PHONY : spi_ram_fifo.c.i
 
 spi_ram_fifo.s: spi_ram_fifo.c.s
@@ -220,7 +220,7 @@ spi_ram_fifo.s: spi_ram_fifo.c.s
 
 # target to generate assembly for a file
 spi_ram_fifo.c.s:
-	cd /home/johnnyc/capstone/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram_fifo.c.s
+	cd /home/johnnyc/capstone/esp/build && $(MAKE) $(MAKESILENT) -f esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/build.make esp-idf/spi_ram/CMakeFiles/__idf_spi_ram.dir/spi_ram_fifo.c.s
 .PHONY : spi_ram_fifo.c.s
 
 # Help Target
@@ -253,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/johnnyc/capstone/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/johnnyc/capstone/esp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

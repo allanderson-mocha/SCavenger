@@ -15,7 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "config/sdkconfig.cmake"
   "config/sdkconfig.h"
   "mconf-idf-prefix/tmp/mconf-idf-mkdirs.cmake"
-  "/home/johnnyc/capstone/sdkconfig"
+  "/home/johnnyc/capstone/esp/sdkconfig"
   "/home/johnnyc/esp/ESP8266_RTOS_SDK/.git/HEAD"
   "/home/johnnyc/esp/ESP8266_RTOS_SDK/.git/modules/components/coap/libcoap/HEAD"
   "/home/johnnyc/esp/ESP8266_RTOS_SDK/.git/modules/components/json/cJSON/HEAD"

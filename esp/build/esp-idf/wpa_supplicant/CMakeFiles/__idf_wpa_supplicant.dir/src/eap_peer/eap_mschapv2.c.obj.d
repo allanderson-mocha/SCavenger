@@ -1,7 +1,7 @@
 esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_mschapv2.c.obj: \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/wpa_supplicant/src/eap_peer/eap_mschapv2.c \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/wpa_supplicant/src/rsn_supp/wpa.h \
- /home/johnnyc/capstone/build/config/sdkconfig.h \
+ /home/johnnyc/capstone/esp/build/config/sdkconfig.h \
  /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/include/rom/ets_sys.h \
  /home/johnnyc/esp/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/8.4.0/include/stdint.h \
  /home/johnnyc/esp/xtensa-lx106-elf/xtensa-lx106-elf/sys-include/stdint.h \

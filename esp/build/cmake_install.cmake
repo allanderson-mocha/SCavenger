@@ -1,4 +1,4 @@
-# Install script for directory: /home/johnnyc/capstone
+# Install script for directory: /home/johnnyc/capstone/esp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/johnnyc/capstone/build/esp-idf/cmake_install.cmake")
+  include("/home/johnnyc/capstone/esp/build/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/johnnyc/capstone/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/johnnyc/capstone/esp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

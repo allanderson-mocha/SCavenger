@@ -49,8 +49,8 @@ void lcd_stringout_P(char *);
   Use the "PROGMEM" attribute to store the strings in the ROM
   instead of in RAM.
 */
-const unsigned char str1[] PROGMEM = ">> at328-5.c  <<78901234";
-const unsigned char str2[] PROGMEM = ">> USC EE459L <<78901234";
+const unsigned char str1[] PROGMEM = ">> at328-5.c  <<78\n90";
+const unsigned char str2[] PROGMEM = ">> USC EE459L <<7890EFGH";
 
 #define LCD_RS          (1 << PB4)
 #define LCD_RW          (1 << PB3)

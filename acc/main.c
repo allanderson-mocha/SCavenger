@@ -1,84 +1,66 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include <avr/pgmspace.h>
 #include <stdio.h>
-#include "lcd.h"     // Include LCD functions
-#include "i2c.h"     // Include I2C functions
+#include "lcd.h"
+#include "i2c.h"
 
-#define I2C_DEVICE_ADDR 0x30  // 8-bit I2C address for LIS3DH
+#define LIS3DH_ADDR 0x18  // 7-bit address
+#define LIS3DH_WRITE (LIS3DH_ADDR << 1)
+#define LIS3DH_READ  ((LIS3DH_ADDR << 1) | 0x01)
 
-char buffer[17];  // For printing to LCD
+char buffer[17];
 
 int main(void) {
-    uint8_t status;
-    uint8_t wbuf[2];     // Write buffer (register + value or register address)
-    uint8_t rbuf[6];     // Read buffer for acceleration data
+    lcd_init();
+    i2c_init(72);  // 100kHz if F_CPU = 8MHz
 
-    lcd_init();                    // Initialize LCD
-    i2c_init(72);                  // Initialize I2C (~100kHz for 8MHz clock)
+    _delay_ms(100); // wait for LIS3DH to power up
+
+    // Configure CTRL_REG1 (0x20) = 0x57 (ODR=100Hz, XYZ enabled)
+    uint8_t init_buf[] = {0x20, 0x57};
+    uint8_t status = i2c_io(LIS3DH_WRITE, init_buf, 2, NULL, 0);
+    if (status != 0) {
+        lcd_moveto(0, 0);
+        snprintf(buffer, sizeof(buffer), "Init Error: %02X", status);
+        lcd_stringout(buffer);
+        while (1);
+    }
 
     lcd_moveto(0, 0);
-    lcd_stringout("Configuring...");
+    lcd_stringout("Accel Ready");
 
     _delay_ms(500);
 
-    // --- Write CTRL_REG1 (0x20) ---
-    wbuf[0] = 0x20;  // CTRL_REG1 address
-    wbuf[1] = 0x27;  // Value: 10Hz, normal mode, XYZ enabled
-    status = i2c_io(I2C_DEVICE_ADDR, wbuf, 2, NULL, 0);
-
-    // --- Write CTRL_REG4 (0x23) ---
-    wbuf[0] = 0x23;  // CTRL_REG4 address
-    wbuf[1] = 0x88;  // Value: block data update, high resolution
-    status = i2c_io(I2C_DEVICE_ADDR, wbuf, 2, NULL, 0);
-
-    _delay_ms(500);
-
-    // lcd_moveto(1, 0);
-    // lcd_stringout("Setup Done");   
-    // _delay_ms(500);
-
-    // --- Main loop: read sensor values ---
     while (1) {
-        uint8_t status_reg;
+        // Read 6 bytes from OUT_X_L (0x28) with auto-increment
+        uint8_t reg_addr = 0x28 | 0x80; // auto-increment bit
+        uint8_t data[6] = {0};
+        status = i2c_io(LIS3DH_WRITE, &reg_addr, 1, data, 6);
+        if (status != 0) {
+            lcd_moveto(1, 0);
+            snprintf(buffer, sizeof(buffer), "Read Err: %02X", status);
+            lcd_stringout(buffer);
+            continue;
+        }
 
-        // Step 1: Read STATUS_REG (0x27)
-        wbuf[0] = 0x27;  // STATUS_REG address
-        status = i2c_io(I2C_DEVICE_ADDR, wbuf, 1, &status_reg, 1);
+        // Combine low/high bytes (data is in 2's complement, 10-bit left-aligned in 16-bit)
+        int16_t x = (int16_t)((data[1] << 8) | data[0]) >> 6;
+        int16_t y = (int16_t)((data[3] << 8) | data[2]) >> 6;
+        int16_t z = (int16_t)((data[5] << 8) | data[4]) >> 6;
 
         lcd_moveto(0, 0);
-        if (status == 0) {
-            snprintf(buffer, sizeof(buffer), "Data: 0x%02X", status_reg);
-            lcd_stringout(buffer);
-        } else {
-            snprintf(buffer, sizeof(buffer), "Err: 0x%02X", status);
-            lcd_stringout(buffer);
-        }
+        snprintf(buffer, sizeof(buffer), "X:%4d", x);
+        lcd_stringout(buffer);
 
-        // Step 2: If data is ready (ZYXDA == 1), read acceleration
-        if ((status == 0) && (status_reg & 0x08)) {
-            wbuf[0] = 0x28;  // OUT_X_L address
-            status = i2c_io(I2C_DEVICE_ADDR, wbuf, 1, rbuf, 6);
+        lcd_moveto(1, 0);
+        snprintf(buffer, sizeof(buffer), "Y:%4d", y);
+        lcd_stringout(buffer);
 
-            lcd_moveto(1, 0);
-            if (status == 0) {
-                int16_t x = (rbuf[1] << 8) | rbuf[0];
-                int16_t y = (rbuf[3] << 8) | rbuf[2];
-                int16_t z = (rbuf[5] << 8) | rbuf[4];
+        lcd_moveto(0, 20);
+        snprintf(buffer, sizeof(buffer), "Z:%4d", z);
+        lcd_stringout(buffer);
 
-                snprintf(buffer, sizeof(buffer), "X:%d", x);   // Showing X value
-                lcd_stringout(buffer);
-            } else {
-                snprintf(buffer, sizeof(buffer), "Err: 0x%02X", status);
-                lcd_stringout(buffer);
-            }
-        } else {
-            // No new data ready
-            lcd_moveto(1, 0);
-            lcd_stringout("No new data  ");
-        }
-
-        _delay_ms(200);  // Polling delay
+        _delay_ms(250); // update rate
     }
 
     return 0;

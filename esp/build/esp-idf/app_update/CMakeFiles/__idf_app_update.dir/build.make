@@ -87,15 +87,15 @@ esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj: esp-idf/a
 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj: /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c
 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj: esp-idf/app_update/CMakeFiles/__idf_app_update.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/johnnyc/capstone/esp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj"
-	cd /home/johnnyc/capstone/esp/build/esp-idf/app_update && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"hello-world\" -DPROJECT_VER=\"f466304-dirty\" $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj -MF CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj.d -o CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c
+	cd /home/johnnyc/capstone/esp/build/esp-idf/app_update && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"hello-world\" -DPROJECT_VER=\"a12b171-dirty\" $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj -MF CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj.d -o CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj -c /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c
 
 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/__idf_app_update.dir/esp_app_desc.c.i"
-	cd /home/johnnyc/capstone/esp/build/esp-idf/app_update && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"hello-world\" -DPROJECT_VER=\"f466304-dirty\" $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c > CMakeFiles/__idf_app_update.dir/esp_app_desc.c.i
+	cd /home/johnnyc/capstone/esp/build/esp-idf/app_update && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"hello-world\" -DPROJECT_VER=\"a12b171-dirty\" $(C_INCLUDES) $(C_FLAGS) -E /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c > CMakeFiles/__idf_app_update.dir/esp_app_desc.c.i
 
 esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/__idf_app_update.dir/esp_app_desc.c.s"
-	cd /home/johnnyc/capstone/esp/build/esp-idf/app_update && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"hello-world\" -DPROJECT_VER=\"f466304-dirty\" $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c -o CMakeFiles/__idf_app_update.dir/esp_app_desc.c.s
+	cd /home/johnnyc/capstone/esp/build/esp-idf/app_update && /home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc $(C_DEFINES) -D PROJECT_NAME=\"hello-world\" -DPROJECT_VER=\"a12b171-dirty\" $(C_INCLUDES) $(C_FLAGS) -S /home/johnnyc/esp/ESP8266_RTOS_SDK/components/app_update/esp_app_desc.c -o CMakeFiles/__idf_app_update.dir/esp_app_desc.c.s
 
 # Object files for target __idf_app_update
 __idf_app_update_OBJECTS = \

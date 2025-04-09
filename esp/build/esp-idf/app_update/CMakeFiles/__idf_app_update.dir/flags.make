@@ -8,5 +8,5 @@ C_INCLUDES = -I/home/johnnyc/capstone/esp/build/config -I/home/johnnyc/esp/ESP82
 
 C_FLAGS = -mlongcalls -Wno-frame-address -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -nostdlib -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -ggdb -Og -std=gnu99 -Wno-old-style-declaration -D_GNU_SOURCE -DIDF_VER=\"v3.4-104-g2f586ea4\" -DGCC_NOT_5_2_0 -DESP_PLATFORM
 
-# Custom defines: esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj_DEFINES = PROJECT_VER="f466304-dirty"; PROJECT_NAME="hello-world"
+# Custom defines: esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj_DEFINES = PROJECT_VER="a12b171-dirty"; PROJECT_NAME="hello-world"
 

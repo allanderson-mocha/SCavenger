@@ -17968,7 +17968,7 @@ LOAD esp-idf/newlib/libnewlib.a
 
 .iram0.text     0x0000000040100080     0x512b
                 0x0000000040100080                _iram_text_start = ABSOLUTE (.)
- *(.iram1 .iram1.* EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text)
+ *(.iram1 .iram1.* EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text)
  .iram1.0.literal
                 0x0000000040100080       0x1c esp-idf/esp8266/libesp8266.a(task_wdt.c.obj)
  .iram1.1.literal
@@ -18533,6 +18533,7 @@ LOAD esp-idf/newlib/libnewlib.a
  *fill*         0x0000000040104bc2        0x0 
  *fill*         0x0000000040104bc2        0x0 
  *fill*         0x0000000040104bc2        0x0 
+ *libspi_flash.a:th25q16hb.*(.literal .literal.* .text .text.*)
  *libspi_flash.a:spi_flash_raw.*(.literal .literal.* .text .text.*)
  *fill*         0x0000000040104bc2        0x2 
  .text.Cache_Read_Disable_2
@@ -18577,7 +18578,6 @@ LOAD esp-idf/newlib/libnewlib.a
  *fill*         0x00000000401051ab        0x0 
  *fill*         0x00000000401051ab        0x0 
  *fill*         0x00000000401051ab        0x0 
- *libspi_flash.a:th25q16hb.*(.literal .literal.* .text .text.*)
                 0x00000000401051ab                _iram_text_end = ABSOLUTE (.)
 
 .iram0.bss      0x00000000401051b0      0x700
@@ -18597,71 +18597,71 @@ LOAD esp-idf/newlib/libnewlib.a
                 0x00000000401056a0                g_log_mod
                 0x00000000401056a4                g_log_level
  *liblwip.a:(.bss .bss.* COMMON)
- *libfreertos.a:tasks.*(.bss .bss.* COMMON)
- .bss.uxSchedulerSuspended
-                0x00000000401056a8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xIdleTaskHandle
-                0x00000000401056ac        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xNextTaskUnblockTime
-                0x00000000401056b0        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.uxTaskNumber
-                0x00000000401056b4        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xNumOfOverflows
-                0x00000000401056b8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xYieldPending
-                0x00000000401056bc        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.uxPendedTicks
-                0x00000000401056c0        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xSchedulerRunning
-                0x00000000401056c4        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.uxTopReadyPriority
-                0x00000000401056c8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xTickCount
-                0x00000000401056cc        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.uxCurrentNumberOfTasks
-                0x00000000401056d0        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xSuspendedTaskList
-                0x00000000401056d4       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.uxDeletedTasksWaitingCleanUp
-                0x00000000401056e8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xTasksWaitingTermination
-                0x00000000401056ec       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xPendingReadyList
-                0x0000000040105700       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.pxOverflowDelayedTaskList
-                0x0000000040105714        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.pxDelayedTaskList
-                0x0000000040105718        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xDelayedTaskList2
-                0x000000004010571c       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.xDelayedTaskList1
-                0x0000000040105730       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.pxReadyTasksLists
-                0x0000000040105744      0x12c esp-idf/freertos/libfreertos.a(tasks.c.obj)
- .bss.pxCurrentTCB
-                0x0000000040105870        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
-                0x0000000040105870                pxCurrentTCB
+ *libfreertos.a:stream_buffer.*(.bss .bss.* COMMON)
+ *libfreertos.a:impure.*(.bss .bss.* COMMON)
+ *libfreertos.a:queue.*(.bss .bss.* COMMON)
+ *libfreertos.a:freertos_hooks.*(.bss .bss.* COMMON)
+ *libfreertos.a:event_groups.*(.bss .bss.* COMMON)
  *libfreertos.a:timers.*(.bss .bss.* COMMON)
  .bss.xLastTime$4351
-                0x0000000040105874        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056a8        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
  .bss.xTimerTaskHandle
-                0x0000000040105878        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056ac        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
  .bss.xTimerQueue
-                0x000000004010587c        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056b0        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
  .bss.pxOverflowTimerList
-                0x0000000040105880        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056b4        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
  .bss.pxCurrentTimerList
-                0x0000000040105884        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056b8        0x4 esp-idf/freertos/libfreertos.a(timers.c.obj)
  .bss.xActiveTimerList2
-                0x0000000040105888       0x14 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056bc       0x14 esp-idf/freertos/libfreertos.a(timers.c.obj)
  .bss.xActiveTimerList1
-                0x000000004010589c       0x14 esp-idf/freertos/libfreertos.a(timers.c.obj)
+                0x00000000401056d0       0x14 esp-idf/freertos/libfreertos.a(timers.c.obj)
+ *libfreertos.a:tasks.*(.bss .bss.* COMMON)
+ .bss.uxSchedulerSuspended
+                0x00000000401056e4        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xIdleTaskHandle
+                0x00000000401056e8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xNextTaskUnblockTime
+                0x00000000401056ec        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.uxTaskNumber
+                0x00000000401056f0        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xNumOfOverflows
+                0x00000000401056f4        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xYieldPending
+                0x00000000401056f8        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.uxPendedTicks
+                0x00000000401056fc        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xSchedulerRunning
+                0x0000000040105700        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.uxTopReadyPriority
+                0x0000000040105704        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xTickCount
+                0x0000000040105708        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.uxCurrentNumberOfTasks
+                0x000000004010570c        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xSuspendedTaskList
+                0x0000000040105710       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x0000000040105724        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xTasksWaitingTermination
+                0x0000000040105728       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xPendingReadyList
+                0x000000004010573c       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.pxOverflowDelayedTaskList
+                0x0000000040105750        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.pxDelayedTaskList
+                0x0000000040105754        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xDelayedTaskList2
+                0x0000000040105758       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.xDelayedTaskList1
+                0x000000004010576c       0x14 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.pxReadyTasksLists
+                0x0000000040105780      0x12c esp-idf/freertos/libfreertos.a(tasks.c.obj)
+ .bss.pxCurrentTCB
+                0x00000000401058ac        0x4 esp-idf/freertos/libfreertos.a(tasks.c.obj)
+                0x00000000401058ac                pxCurrentTCB
  *libfreertos.a:list.*(.bss .bss.* COMMON)
- *libfreertos.a:queue.*(.bss .bss.* COMMON)
- *libfreertos.a:stream_buffer.*(.bss .bss.* COMMON)
- *libfreertos.a:event_groups.*(.bss .bss.* COMMON)
- *libfreertos.a:impure.*(.bss .bss.* COMMON)
- *libfreertos.a:freertos_hooks.*(.bss .bss.* COMMON)
                 0x00000000401058b0                . = ALIGN (0x4)
                 0x00000000401058b0                _iram_bss_end = ABSOLUTE (.)
                 0x00000000401058b0                _iram_end = ABSOLUTE (.)
@@ -18772,8 +18772,8 @@ LOAD esp-idf/newlib/libnewlib.a
  *fill*         0x000000003ffe8532        0x2 
  .rodata.s_log_color
                 0x000000003ffe8534       0x18 esp-idf/log/liblog.a(log.c.obj)
- *libspi_flash.a:spi_flash_raw.*(.rodata .rodata.*)
  *libspi_flash.a:th25q16hb.*(.rodata .rodata.*)
+ *libspi_flash.a:spi_flash_raw.*(.rodata .rodata.*)
                 0x000000003ffe854c                _data_end = ABSOLUTE (.)
                 0x000000003ffe854c                . = ALIGN (0x4)
 
@@ -18787,7 +18787,7 @@ LOAD esp-idf/newlib/libnewlib.a
 .dram0.bss      0x000000003ffe8550     0x1940
                 0x000000003ffe8550                . = ALIGN (0x8)
                 0x000000003ffe8550                _bss_start = ABSOLUTE (.)
- *(EXCLUDE_FILE(*libfreertos.a:tasks.* *libfreertos.a:timers.* *libfreertos.a:list.* *libfreertos.a:queue.* *libfreertos.a:stream_buffer.* *libfreertos.a:event_groups.* *libfreertos.a:impure.* *libfreertos.a:freertos_hooks.* *liblwip.a *libcore.a) .bss EXCLUDE_FILE(*libfreertos.a:tasks.* *libfreertos.a:timers.* *libfreertos.a:list.* *libfreertos.a:queue.* *libfreertos.a:stream_buffer.* *libfreertos.a:event_groups.* *libfreertos.a:impure.* *libfreertos.a:freertos_hooks.* *liblwip.a *libcore.a) .bss.* EXCLUDE_FILE(*libfreertos.a:tasks.* *libfreertos.a:timers.* *libfreertos.a:list.* *libfreertos.a:queue.* *libfreertos.a:stream_buffer.* *libfreertos.a:event_groups.* *libfreertos.a:impure.* *libfreertos.a:freertos_hooks.* *liblwip.a *libcore.a) COMMON)
+ *(EXCLUDE_FILE(*libfreertos.a:stream_buffer.* *libfreertos.a:impure.* *libfreertos.a:queue.* *libfreertos.a:freertos_hooks.* *libfreertos.a:event_groups.* *libfreertos.a:timers.* *libfreertos.a:tasks.* *libfreertos.a:list.* *liblwip.a *libcore.a) .bss EXCLUDE_FILE(*libfreertos.a:stream_buffer.* *libfreertos.a:impure.* *libfreertos.a:queue.* *libfreertos.a:freertos_hooks.* *libfreertos.a:event_groups.* *libfreertos.a:timers.* *libfreertos.a:tasks.* *libfreertos.a:list.* *liblwip.a *libcore.a) .bss.* EXCLUDE_FILE(*libfreertos.a:stream_buffer.* *libfreertos.a:impure.* *libfreertos.a:queue.* *libfreertos.a:freertos_hooks.* *libfreertos.a:event_groups.* *libfreertos.a:timers.* *libfreertos.a:tasks.* *libfreertos.a:list.* *liblwip.a *libcore.a) COMMON)
  .bss.s_nmi_wd_state
                 0x000000003ffe8550        0x4 esp-idf/esp8266/libesp8266.a(task_wdt.c.obj)
  .bss.s_reset_reason
@@ -19132,7 +19132,7 @@ LOAD esp-idf/newlib/libnewlib.a
 .flash.text     0x0000000040210010    0x1cc4e
                 0x0000000040210010                _stext = .
                 0x0000000040210010                _text_start = ABSOLUTE (.)
- *(EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal.* EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text.* .wifi0iram .wifi0iram.*)
+ *(EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .literal.* EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *libgcc.a:unwind-dw2-fde.* *libgcc.a:unwind-dw2.* *libphy.a *libpp.a) .text.* .wifi0iram .wifi0iram.*)
  .literal.user_init_entry
                 0x0000000040210010       0x1c esp-idf/esp8266/libesp8266.a(startup.c.obj)
                                          0x50 (size before relaxing)
@@ -24554,7 +24554,7 @@ LOAD esp-idf/newlib/libnewlib.a
  .rodata2.26    0x000000004022ceca        0x2 /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/lib/libpp.a(pp.o)
  .rodata2.25    0x000000004022cecc        0x6 /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/lib/libpp.a(pp.o)
  .rodata2.24    0x000000004022ced2        0xe /home/johnnyc/esp/ESP8266_RTOS_SDK/components/esp8266/lib/libpp.a(pp.o)
- *(EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *liblog.a) .rodata EXCLUDE_FILE(*libspi_flash.a:spi_flash_raw.* *libspi_flash.a:th25q16hb.* *liblog.a) .rodata.*)
+ *(EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *liblog.a) .rodata EXCLUDE_FILE(*libspi_flash.a:th25q16hb.* *libspi_flash.a:spi_flash_raw.* *liblog.a) .rodata.*)
  .rodata.user_init_entry.str1.4
                 0x000000004022cee0       0x94 esp-idf/esp8266/libesp8266.a(startup.c.obj)
  .rodata.call_start_cpu.str1.4

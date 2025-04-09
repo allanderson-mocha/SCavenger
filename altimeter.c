@@ -4,20 +4,35 @@
 #include "i2c.h"
 #include "lcd.h"
 
-#define F_CPU 16000000UL      // 16 MHz clock speed
+#define F_CPU 8000000UL      // 8 MHz clock speed
 #define MPL3115A2_ADDRESS 0x60 // 7-bit address
+
+// TODO: Turn into helper code to simply call get_altitude() in main.c
+// TODO: Clean up file structure for future main code
 
 // Initialize the MPL3115A2 altimeter in altimeter mode, OSR = 128
 void mpl3115a2_init(void) {
     uint8_t wbuf[2];
-    wbuf[0] = 0x26; // Control register address
-    wbuf[1] = 0xB9; // Altimeter mode, OSR=128
-    // Write 2 bytes: register address then the configuration data
-    if(i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 2, NULL, 0) != 0) {
+
+    // Enter Standby mode (SBYB=0) to configure settings
+    wbuf[0] = 0x26; // CTRL_REG1 address
+    wbuf[1] = 0xB8; 
+    if (i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 2, NULL, 0) != 0) {
         lcd_moveto(1, 0);
         lcd_stringout("I2C write error");
+        return;
     }
-    _delay_ms(500);
+    _delay_ms(10);
+
+    // Set Active mode (SBYB=1) to start measurement
+    wbuf[1] = 0xB9; // Same as before, but now SBYB=1
+    if (i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 2, NULL, 0) != 0) {
+        lcd_moveto(1, 0);
+        lcd_stringout("I2C start error");
+        return;
+    }
+
+    _delay_ms(500); // Let sensor stabilize
 }
 
 // Read altitude from the MPL3115A2 and display the value on the LCD
@@ -53,7 +68,7 @@ int main(void) {
     lcd_stringout("MPL3115A2 Test ");
     
     mpl3115a2_init();    // Initialize the altimeter
-    
+
     while (1) {
         mpl3115a2_read_altitude(); // Read and display altitude
         _delay_ms(1000);

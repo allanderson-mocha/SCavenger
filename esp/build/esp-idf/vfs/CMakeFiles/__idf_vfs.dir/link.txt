@@ -1,2 +1,0 @@
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc libvfs.a CMakeFiles/__idf_vfs.dir/vfs.c.obj CMakeFiles/__idf_vfs.dir/vfs_uart.c.obj CMakeFiles/__idf_vfs.dir/vfs_semihost.c.obj
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib libvfs.a

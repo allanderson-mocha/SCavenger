@@ -1,2 +1,0 @@
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc libesp_ringbuf.a CMakeFiles/__idf_esp_ringbuf.dir/ringbuf.c.obj
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib libesp_ringbuf.a

@@ -1,2 +1,0 @@
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc liblog.a CMakeFiles/__idf_log.dir/log.c.obj
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib liblog.a

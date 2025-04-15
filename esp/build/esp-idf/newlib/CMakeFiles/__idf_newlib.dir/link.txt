@@ -1,2 +1,0 @@
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc libnewlib.a CMakeFiles/__idf_newlib.dir/src/esp_malloc.c.obj CMakeFiles/__idf_newlib.dir/src/locks.c.obj CMakeFiles/__idf_newlib.dir/src/random.c.obj CMakeFiles/__idf_newlib.dir/src/reent_init.c.obj CMakeFiles/__idf_newlib.dir/src/select.c.obj CMakeFiles/__idf_newlib.dir/src/syscall.c.obj CMakeFiles/__idf_newlib.dir/src/termios.c.obj CMakeFiles/__idf_newlib.dir/src/time.c.obj
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib libnewlib.a

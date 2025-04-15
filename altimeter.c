@@ -1,17 +1,14 @@
+#include "altimeter.h"
+#include <stdint.h>
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
+
 #include "i2c.h"
 #include "lcd.h"
 
-#define F_CPU 8000000UL      // 8 MHz clock speed
-#define MPL3115A2_ADDRESS 0x60 // 7-bit address
-
-// TODO: Turn into helper code to simply call get_altitude() in main.c
-// TODO: Clean up file structure for future main code
-
 // Initialize the MPL3115A2 altimeter in altimeter mode, OSR = 128
-void mpl3115a2_init(void) {
+void altimeter_init(void) {
     uint8_t wbuf[2];
 
     // Enter Standby mode (SBYB=0) to configure settings
@@ -19,7 +16,7 @@ void mpl3115a2_init(void) {
     wbuf[1] = 0xB8; 
     if (i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 2, NULL, 0) != 0) {
         lcd_moveto(1, 0);
-        lcd_stringout("I2C write error");
+        lcd_stringout("Alt. write error");
         return;
     }
     _delay_ms(10);
@@ -28,7 +25,7 @@ void mpl3115a2_init(void) {
     wbuf[1] = 0xB9; // Same as before, but now SBYB=1
     if (i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 2, NULL, 0) != 0) {
         lcd_moveto(1, 0);
-        lcd_stringout("I2C start error");
+        lcd_stringout("Alt. start error");
         return;
     }
 
@@ -36,7 +33,7 @@ void mpl3115a2_init(void) {
 }
 
 // Read altitude from the MPL3115A2 and display the value on the LCD
-void mpl3115a2_read_altitude(void) {
+int32_t get_altitude(void) {
     char buffer[17]; // Enough for a 16-character LCD line + null terminator
     uint8_t wbuf[1] = { 0x01 }; // Register address for OUT_P_MSB
     uint8_t rbuf[3];
@@ -50,13 +47,21 @@ void mpl3115a2_read_altitude(void) {
     
     // Combine the three bytes into a 20-bit altitude value
     int32_t altitude = ((int32_t)rbuf[0] << 10) | ((int32_t)rbuf[1] << 2) | ((rbuf[2] >> 6) & 0x03);
+    
+    /*
+    EXAMPLE ALTITUDE LCD DISPLAY
     // Format the altitude string (ensure it fits on 16 characters)
     snprintf(buffer, sizeof(buffer), "Alt: %ld m   ", altitude);
     
     // Display the altitude on the first line of the LCD
     lcd_moveto(1, 0);
     lcd_stringout(buffer);
+    */
+   return altitude;
 }
+
+/*
+TEST CODE EXAMPLE
 
 int main(void) {
     lcd_init();          // Initialize the LCD display
@@ -67,12 +72,14 @@ int main(void) {
     lcd_moveto(0, 0);
     lcd_stringout("MPL3115A2 Test ");
     
-    mpl3115a2_init();    // Initialize the altimeter
+    altimeter_init();    // Initialize the altimeter
 
+    // Example when just displaying and not saving altitude value
     while (1) {
-        mpl3115a2_read_altitude(); // Read and display altitude
+        get_altitude(); // Read and display altitude
         _delay_ms(1000);
     }
     
     return 0;
 }
+*/ 

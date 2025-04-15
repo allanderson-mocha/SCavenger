@@ -1,2 +1,0 @@
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar qc libtcpip_adapter.a CMakeFiles/__idf_tcpip_adapter.dir/esp_netif.c.obj CMakeFiles/__idf_tcpip_adapter.dir/event_handlers.c.obj CMakeFiles/__idf_tcpip_adapter.dir/tcpip_adapter_lwip.c.obj
-/home/johnnyc/esp/xtensa-lx106-elf/bin/xtensa-lx106-elf-ranlib libtcpip_adapter.a

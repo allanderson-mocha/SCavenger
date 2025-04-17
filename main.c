@@ -4,7 +4,7 @@
 #include "i2c.h"
 #include "lcd.h"
 
-void main() {
+int main(void) {
     // Device initializations
     lcd_init();
     i2c_init(72);
@@ -14,5 +14,5 @@ void main() {
     int16_t coords[3];  // Array containing coords to be updated by get_accel
     get_accel(coords);
 
-    
+    return 0;
 }

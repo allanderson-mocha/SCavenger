@@ -12,73 +12,73 @@
 #define MAX_CHARS_PER_LINE 20
 #define MAX_LCD_LINES 4
 
-void say(const char* line) {
+typedef struct {
+    const char* fullText;
+    int charIndex;
+    int row;
+    int col;
+    uint8_t finished;
+} DialogueState;
+
+void init_say(DialogueState* state, const char* text) {
     lcd_writecommand(0x01); // Clear display
-
-    int line_num = 0;
-    int col = 0;
-    int start = 0;
-    int len = strlen(line);
-
-    while (start < len && line_num < MAX_LCD_LINES) {
-        // Find the end of the next word
-        int end = start;
-        while (end < len && line[end] != ' ') {
-            end++;
-        }
-        int word_len = end - start;
-
-        // If word doesn't fit in current line, move to next line
-        if (col + word_len > MAX_CHARS_PER_LINE) {
-            line_num++;
-            col = 0;
-        }
-
-        if (line_num >= MAX_LCD_LINES) break;
-
-        // Set cursor to correct position
-        int row = line_num % 2;
-        int col_offset = (line_num / 2) * MAX_CHARS_PER_LINE;
-        lcd_moveto(row, col_offset + col);
-
-        // Write the word
-        for (int i = start; i < end; i++) {
-            lcd_writedata(line[i]);
-            col++;
-        }
-
-        // Add space if there's room and it's not the end of the string
-        if (line[end] == ' ' && col + 1 <= MAX_CHARS_PER_LINE) {
-            lcd_writedata(' ');
-            col++;
-            end++;  // Skip the space
-        }
-
-        start = end;
-    }
+    state->fullText = text;
+    state->charIndex = 0;
+    state->row = 0;
+    state->col = 0;
+    state->finished = 0;
 }
 
-void wait_ms(unsigned int ms) {
-    while (ms > 0) {
-        _delay_ms(1);
-        ms--;
+void say_step(DialogueState* state) {
+    if (state->finished || state->fullText[state->charIndex] == '\0') {
+        state->finished = 1;
+        return;
     }
+
+    char c = state->fullText[state->charIndex++];
+
+    // Auto-wrap after 20 characters per LCD segment
+    if (state->col >= MAX_CHARS_PER_LINE) {
+        state->col = 0;
+        state->row++;
+    }
+
+    if (state->row >= MAX_LCD_LINES) {
+        state->finished = 1;
+        return;
+    }
+
+    int lcd_row = state->row % 2;
+    int lcd_col_offset = (state->row / 2) * MAX_CHARS_PER_LINE;
+    lcd_moveto(lcd_row, lcd_col_offset + state->col);
+    lcd_writedata(c);
+    state->col++;
 }
 
 int main(void) {
     lcd_init();
     light_init();
 
-    say("Waking up...");
-    wait_ms(2000);
+    DialogueState narrator;
+    init_say(&narrator, "Waking up...");
+
+    while (!narrator.finished) {
+        say_step(&narrator);
+        _delay_ms(50); // Simulate timed char-by-char step (replace with non-blocking logic if needed)
+    }
 
     float initial_light = get_light();
     uint8_t narrator_prefers_bright = (initial_light < BRIGHT_THRESHOLD);
 
     if (narrator_prefers_bright) {
-        say("It's too dark in here! Turn on the lights.");
+        init_say(&narrator, "It's too dark in here! Turn on the lights.");
     } else {
-        say("It's too bright in here! Turn off the lights.");
+        init_say(&narrator, "It's too bright in here! Turn off the lights.");
+    }
+
+    while (!narrator.finished) {
+        say_step(&narrator);
+        _delay_ms(50);
     }
 
     // Wait until player adjusts light to match narrator's preference
@@ -89,12 +89,13 @@ int main(void) {
             (!narrator_prefers_bright && current_light < BRIGHT_THRESHOLD)) {
             break;
         }
-
-        wait_ms(1000);  // Check once per second
     }
 
-    say("Ah, that's better.");
-    wait_ms(2000);
+    init_say(&narrator, "Ah, that's better.");
+    while (!narrator.finished) {
+        say_step(&narrator);
+        _delay_ms(50);
+    }
 
     // TODO: Puzzle 2 will go here
 

@@ -5,25 +5,66 @@
 
 void buzzer_init() {
     // Set BUZZER_PIN as an output
-    DDRD |= (1 << BUZZER_PIN);
+    DDRB |= (1 << BUZZER_PIN);
 }
 
 void buzzer_on() {
     // Set BUZZER_PIN high
-    PORTD |= (1 << BUZZER_PIN);
+    PORTB |= (1 << BUZZER_PIN);
 }
 
 void buzzer_off() {
     // Set BUZZER_PIN low
-    PORTD &= ~(1 << BUZZER_PIN);
+    PORTB &= ~(1 << BUZZER_PIN);
 }
 
-void beep(uint16_t time) {
-    buzzer_on();
-    _delay_ms(time);    // Wait 500ms
-    buzzer_off();      // Turn buzzer OFF
-    _delay_ms(time);
+
+// void play_note(unsigned short freq)
+// {
+//     unsigned long period = 1000000UL / freq;
+
+//     for (unsigned short i = 0; i < freq; i++) {
+//         PORTB |= (1 << PB1);
+//         _delay_us(period / 2);
+//         PORTB &= ~(1 << PB1);
+//         _delay_us(period / 2);
+//     }
+// }
+void play_note(unsigned short freq)
+{
+    unsigned long period = 1000000UL / freq;
+    unsigned long loop_delay = (period / 2) / 10;
+
+    for (unsigned short i = 0; i < freq; i++) {
+        PORTB |= (1 << PB1);
+
+        for (unsigned long d = 0; d < loop_delay; d++) {
+            _delay_us(10);
+        }
+
+        PORTB &= ~(1 << PB1);
+
+        for (unsigned long d = 0; d < loop_delay; d++) {
+            _delay_us(10);
+        }
+    }
 }
+
+// void play_note(unsigned short freq)
+// {
+//     unsigned long period;
+//     period = 1000000UL / freq;  // Period in microseconds
+
+//     // Play for approx 1 second (freq cycles)
+//     for (unsigned short i = 0; i < freq; i++) {
+//         PORTB |= (1 << PB1);             // Set PB1 high
+//         variable_delay_us(period / 2);   // Delay half period
+//         PORTB &= ~(1 << PB1);            // Set PB1 low
+//         variable_delay_us(period / 2);   // Delay half period
+//     }
+// }
+
+
 
 /*
 EXAMPLE USE

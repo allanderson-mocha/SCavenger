@@ -2,8 +2,9 @@
 #define BUZZ_H
 
 #include <stdint.h>
+#include <avr/io.h>
 
-#define BUZZER_PIN PD6  // Connect buzzer to PD6
+#define BUZZER_PIN PB1  // Connect buzzer to PD6
 
 /**
  * @brief Initializes the buzzer pin.
@@ -35,6 +36,6 @@ void buzzer_off(void);
  *
  * @param time Duration to beep in milliseconds.
  */
-void beep(uint16_t time);
-
+// void beep(uint16_t time);
+void play_note(unsigned short freq);
 #endif

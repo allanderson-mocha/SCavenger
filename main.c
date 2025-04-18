@@ -7,6 +7,8 @@
 #include <string.h>
 #include "light_sensor.h"
 #include "lcd.h"
+#include "buzz.h"
+
 
 #define BRIGHT_THRESHOLD 5.0
 #define MAX_CHARS_PER_LINE 20

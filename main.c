@@ -6,6 +6,8 @@
 #include <string.h>
 #include "light_sensor.h"
 #include "lcd.h"
+#include "buzz.h"
+
 
 #define BRIGHT_THRESHOLD 5.0  // Adjustable light threshold
 #define DELAY_MS 1000

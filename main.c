@@ -8,6 +8,7 @@
 #include "light_sensor.h"
 #include "lcd.h"
 #include "buzz.h"
+#include "led.h"
 
 
 #define BRIGHT_THRESHOLD 5.0
@@ -206,11 +207,17 @@ void update_display(void) {
 int main(void) {
     lcd_init();
     buzzer_init();
-    play_note(440);
+    led_init();
+    //play_note(440); // commented out to not make sound at this time
     light_init();
     setup_buttons();
     reset_game();
 
+    // Blink Morse Code: dot-dot-dash (example)
+    led_blink(PORTB, LED2, 200);  // Dot
+    led_blink(PORTB, LED2, 200);  // Dot
+    led_blink(PORTB, LED2, 600);  // Dash
+    
     while (1) {
         if (power_button_pressed) {
             power_button_pressed = 0;

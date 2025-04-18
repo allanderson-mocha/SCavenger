@@ -213,11 +213,14 @@ int main(void) {
     setup_buttons();
     reset_game();
 
+    led_blink(PORTB, LED1, 250);  // Dot
+    led_blink(PORTB, LED1, 500);  // Dash
+    
     // Blink Morse Code: dot-dot-dash (example)
     led_blink(PORTB, LED2, 200);  // Dot
     led_blink(PORTB, LED2, 200);  // Dot
     led_blink(PORTB, LED2, 600);  // Dash
-    
+
     while (1) {
         if (power_button_pressed) {
             power_button_pressed = 0;

@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 // LED pin assignments
-// #define LED1 PB0
+#define LED1 PB0
 #define LED2 PB7
 
 // Function declarations

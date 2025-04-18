@@ -205,6 +205,8 @@ void update_display(void) {
 
 int main(void) {
     lcd_init();
+    buzzer_init();
+    play_note(440);
     light_init();
     setup_buttons();
     reset_game();

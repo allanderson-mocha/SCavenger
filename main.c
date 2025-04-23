@@ -317,7 +317,8 @@ int main(void) {
         if (!dialogue.finished) say_step(&dialogue);
         
         // 🧊 Puzzle 2: Morse Challenge - "Freeze Me"
-        if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+        if(1){
+        // if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
             lcd_stringout("Entered in here");
             // Check if clue button is pressed during Morse challenge
             if (!(PINC & (1 << CLUE_BUTTON_PIN))) {

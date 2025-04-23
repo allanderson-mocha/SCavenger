@@ -317,33 +317,33 @@ int main(void) {
         if (!dialogue.finished) say_step(&dialogue);
         
         // 🧊 Puzzle 2: Morse Challenge - "Freeze Me"
-        if(1){
-        // if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
-            lcd_stringout("Entered in here");
-            // Check if clue button is pressed during Morse challenge
-            if (!(PINC & (1 << CLUE_BUTTON_PIN))) {
-                lcd_writecommand(1);                      // Clear screen
-                lcd_stringout("Hint: It's cold...");      // Display hint
-                _delay_ms(1500);                          // Hold for 1.5 sec
-                lcd_writecommand(1);                      // Clear again
-                display_dirty = 1;                        // Trigger LCD update
-            }
+        // if(1){
+        // // if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+        //     lcd_stringout("Entered in here");
+        //     // Check if clue button is pressed during Morse challenge
+        //     if (!(PINC & (1 << CLUE_BUTTON_PIN))) {
+        //         lcd_writecommand(1);                      // Clear screen
+        //         lcd_stringout("Hint: It's cold...");      // Display hint
+        //         _delay_ms(1500);                          // Hold for 1.5 sec
+        //         lcd_writecommand(1);                      // Clear again
+        //         display_dirty = 1;                        // Trigger LCD update
+        //     }
 
-            // Flash Morse code on all 3 LEDs
-            morse_freeze_me();
-            lcd_stringout("Should be running");
+        //     // Flash Morse code on all 3 LEDs
+        //     morse_freeze_me();
+        //     lcd_stringout("Should be running");
 
-            // Temperature check using MPL3115A2
-            float tempC = get_temperature();  // <-- from altimeter.c
-            if (tempC < 15.0) {  // cold enough to complete puzzle
-                game.puzzle_complete = 1;
-                game.mode = MODE_DIALOGUE;
-                game.puzzle_index++;
-                game.dialogue_index = 0;
-                game.clue_menu_open = 0;
-                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
-            }
-        }
+        //     // Temperature check using MPL3115A2
+        //     float tempC = get_temperature();  // <-- from altimeter.c
+        //     if (tempC < 15.0) {  // cold enough to complete puzzle
+        //         game.puzzle_complete = 1;
+        //         game.mode = MODE_DIALOGUE;
+        //         game.puzzle_index++;
+        //         game.dialogue_index = 0;
+        //         game.clue_menu_open = 0;
+        //         init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+        //     }
+        // }
 
         update_display();
         _delay_ms(25);

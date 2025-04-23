@@ -59,6 +59,22 @@ int32_t get_altitude(void) {
     */
    return altitude;
 }
+// Read temperature from MPL3115A2 in Celsius
+float get_temperature(void) {
+    uint8_t wbuf[1] = { 0x04 };  // OUT_T_MSB register
+    uint8_t rbuf[2];
+
+    if (i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 1, rbuf, 2) != 0) {
+        lcd_moveto(1, 0);
+        lcd_stringout("Temp read error ");
+        return -1000.0;  // Return an out-of-range value on error
+    }
+
+    int16_t temp_raw = ((int16_t)rbuf[0] << 8) | rbuf[1];
+    temp_raw >>= 4;  // 12-bit signed
+
+    return temp_raw / 16.0;  // Convert to °C
+}
 
 /*
 TEST CODE EXAMPLE

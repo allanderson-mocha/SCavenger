@@ -1,4 +1,5 @@
 /* Puzzle Box Main - Puzzle 1: Light Sensor Challenge */
+/* Puzzle Box Main - Puzzle 2: Morse Code/Temperature Sensor Challenge */
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -9,6 +10,7 @@
 #include "lcd.h"
 #include "buzz.h"
 #include "led.h"
+#include "altimeter.h"
 
 
 #define BRIGHT_THRESHOLD 5.0
@@ -25,6 +27,7 @@ volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
 volatile uint8_t back_button_pressed = 0;
 volatile uint8_t next_button_pressed = 0;
+
 uint8_t display_dirty = 1;
 
 typedef enum {
@@ -57,8 +60,8 @@ typedef struct {
 GameState game;
 
 const char* puzzle0_dialogue[] = {"Waking up...", NULL};
-const char* puzzle1_dialogue[] = {"Puzzle 2 intro", "More dialogue...", NULL};
-const char* puzzle2_dialogue[] = {"Puzzle 3 intro", "More dialogue...", NULL};
+const char* puzzle1_dialogue[] = {"Start Puzzle 2", "by pressing next", NULL};
+const char* puzzle2_dialogue[] = {"Start Puzzle 3", "More dialogue...", NULL};
 const char* puzzle3_dialogue[] = {"Puzzle 4 intro", "More dialogue...", NULL};
 const char* puzzle4_dialogue[] = {"Puzzle 5 intro", "More dialogue...", NULL};
 const char* puzzle5_dialogue[] = {"Puzzle 6 intro", "More dialogue...", NULL};
@@ -210,16 +213,22 @@ int main(void) {
     led_init();
     //play_note(440); // commented out to not make sound at this time
     light_init();
+    altimeter_init();
     setup_buttons();
     reset_game();
 
-    led_blink(PORTB, LED1, 250);  // Dot
-    led_blink(PORTB, LED1, 500);  // Dash
+    // game.puzzle_index = 1;
+    // game.mode = MODE_PUZZLE;
+    // game.puzzle_complete = 0;
+
+
+    // led_blink(PORTB, LED1, 250);  // Dot
+    // led_blink(PORTB, LED1, 500);  // Dash
     
-    // Blink Morse Code: dot-dot-dash (example)
-    led_blink(PORTB, LED2, 200);  // Dot
-    led_blink(PORTB, LED2, 200);  // Dot
-    led_blink(PORTB, LED2, 600);  // Dash
+    // // Blink Morse Code: dot-dot-dash (example)
+    // led_blink(PORTB, LED2, 200);  // Dot
+    // led_blink(PORTB, LED2, 200);  // Dot
+    // led_blink(PORTB, LED2, 600);  // Dash
 
     while (1) {
         if (power_button_pressed) {
@@ -306,6 +315,35 @@ int main(void) {
         }
 
         if (!dialogue.finished) say_step(&dialogue);
+        
+        // 🧊 Puzzle 2: Morse Challenge - "Freeze Me"
+        if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+            lcd_stringout("Entered in here");
+            // Check if clue button is pressed during Morse challenge
+            if (!(PINC & (1 << CLUE_BUTTON_PIN))) {
+                lcd_writecommand(1);                      // Clear screen
+                lcd_stringout("Hint: It's cold...");      // Display hint
+                _delay_ms(1500);                          // Hold for 1.5 sec
+                lcd_writecommand(1);                      // Clear again
+                display_dirty = 1;                        // Trigger LCD update
+            }
+
+            // Flash Morse code on all 3 LEDs
+            morse_freeze_me();
+            lcd_stringout("Should be running");
+
+            // Temperature check using MPL3115A2
+            float tempC = get_temperature();  // <-- from altimeter.c
+            if (tempC < 15.0) {  // cold enough to complete puzzle
+                game.puzzle_complete = 1;
+                game.mode = MODE_DIALOGUE;
+                game.puzzle_index++;
+                game.dialogue_index = 0;
+                game.clue_menu_open = 0;
+                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+            }
+        }
+
         update_display();
         _delay_ms(25);
     }

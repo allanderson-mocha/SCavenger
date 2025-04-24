@@ -11,19 +11,7 @@
 #include "buzz.h"
 #include "led.h"
 #include "altimeter.h"
-
-
-#define BRIGHT_THRESHOLD 5.0
-#define MAX_CHARS_PER_LINE 20
-#define MAX_LCD_LINES 4
-#define PUZZLE_COUNT 6
-
-#define POWER_BUTTON_PIN PC2
-#define CLUE_BUTTON_PIN  PC1
-#define BACK_BUTTON_PIN  PC0
-#define NEXT_BUTTON_PIN  PC3
-
-#define SUCCESS_TEXT "Well done! Continue my story by pressing NEXT."
+#include "main.h"
 
 volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
@@ -31,33 +19,6 @@ volatile uint8_t back_button_pressed = 0;
 volatile uint8_t next_button_pressed = 0;
 
 uint8_t display_dirty = 1;
-
-typedef enum {
-    MODE_DIALOGUE,
-    MODE_PUZZLE
-} SystemMode;
-
-typedef enum {
-    SCREEN_PROMPT,
-    SCREEN_CLUE1,
-    SCREEN_CLUE2,
-    SCREEN_CLUE3,
-    SCREEN_CLUE_CONFIRM,
-    SCREEN_NO_CLUES,
-    SCREEN_CLUE_MENU
-} PuzzleScreen;
-
-typedef struct {
-    uint8_t puzzle_index;
-    SystemMode mode;
-    uint8_t clue_progress;
-    PuzzleScreen current_screen;
-    uint8_t dialogue_index;
-    uint8_t power_on;
-    uint8_t puzzle_complete;
-    float initial_light;
-    uint8_t clue_menu_open;
-} GameState;
 
 GameState game;
 
@@ -135,23 +96,7 @@ const char* clue_menu_text = "Click NEXT to unlock a clue.";
 const char* clue_confirm_text = "Are you sure you want a clue?";
 const char* no_clues_text = "No clues remain.";
 
-typedef struct {
-    const char* fullText;
-    int charIndex;
-    int row;
-    int col;
-    uint8_t finished;
-} DialogueState;
-
 DialogueState dialogue;
-
-void morse_update(uint16_t elapsed_ms);
-void init_say(DialogueState* state, const char* text);
-void say_step(DialogueState* state);
-void reset_game(void);
-void setup_buttons(void);
-void update_display(void);
-void morse_update(uint16_t elapsed_ms);
 
 int main(void) {
     lcd_init();
@@ -239,7 +184,7 @@ int main(void) {
             float current_light = get_light();
             if ((game.initial_light > BRIGHT_THRESHOLD && current_light < BRIGHT_THRESHOLD) ||
                 (game.initial_light < BRIGHT_THRESHOLD && current_light > BRIGHT_THRESHOLD)) {
-                success_sound(); // PLAY SUCCESS SOUND
+                play_victory_sound();
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
                 game.puzzle_index++;
@@ -247,10 +192,6 @@ int main(void) {
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
             }
-            // else{
-            //     error_sound();
-            // }
-
         }
         
         // Puzzle 2: Morse Code Challenge - "Freeze Me"
@@ -258,6 +199,8 @@ int main(void) {
             morse_update(25); // Flash Morse code on all 3 LEDs
             float tempC = get_temperature();  // Temperature check using MPL3115A2
             if (tempC > 24.0) {  // hot enough to complete puzzle (TODO)
+                play_victory_sound();
+                morse_led_off();
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
                 game.puzzle_index++;
@@ -270,6 +213,7 @@ int main(void) {
         if (!dialogue.finished) say_step(&dialogue);
 
         update_display();
+        update_victory_sound(25);
         _delay_ms(25);
     }
 }
@@ -282,6 +226,12 @@ void init_say(DialogueState* state, const char* text) {
     state->col = 0;
     state->finished = 0;
     display_dirty = 0;
+}
+
+void say_voice_click(void) {
+    static uint8_t toggle = 0;
+    toggle = !toggle;
+    if (toggle) sound_play(1000, 30, SOUND_VOICE); // short subtle tick
 }
 
 void say_step(DialogueState* state) {
@@ -318,6 +268,11 @@ void say_step(DialogueState* state) {
     lcd_moveto(lcd_row, lcd_col_offset + state->col);
     lcd_writedata(c);
     state->col++;
+
+    // Optional voice tick for letters only
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+        say_voice_click();
+    }
 }
 
 

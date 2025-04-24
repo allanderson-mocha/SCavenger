@@ -1,74 +1,88 @@
-#include "buzz.h"
 #include <avr/io.h>
-#include <util/delay.h>
+#include <stdint.h>
+#include "buzz.h"
 
+typedef struct {
+    uint16_t freq;
+    uint16_t duration;
+} Note;
+
+#define VICTORY_NOTE_COUNT 4
+
+Note victory_notes[VICTORY_NOTE_COUNT] = {
+    {1318, 100},  // E6
+    {1568, 100},  // G6
+    {1760, 150},  // A6
+    {1396, 200}   // F#6
+};
+
+uint8_t current_note_index = 0;
+uint8_t victory_playing = 0;
+
+volatile uint8_t sound_active = 0;
+uint16_t sound_timer = 0;  // milliseconds remaining
+volatile SoundMode current_sound_mode = SOUND_NONE;
+
+void sound_play(uint16_t freq, uint16_t duration_ms, SoundMode mode) {
+    // If a higher-priority sound is playing, ignore lower ones
+    if (current_sound_mode == SOUND_VICTORY && mode != SOUND_VICTORY)
+        return;
+
+    uint32_t top = F_CPU / (2UL * freq);  // Calculate TOP value for CTC
+
+    DDRB |= (1 << PB1);  // Set PB1 (OC1A) as output
+
+    // Configure Timer1 in CTC mode, toggle OC1A on compare match
+    TCCR1A = (1 << COM1A0);              // Toggle OC1A on compare match
+    TCCR1B = (1 << WGM12) | (1 << CS10); // CTC mode, no prescaler
+
+    OCR1A = (uint16_t)(top - 1);
+
+    sound_timer = duration_ms;
+    sound_active = 1;
+    current_sound_mode = mode;
+}
+
+void sound_update(uint16_t elapsed_ms) {
+    if (sound_active) {
+        if (elapsed_ms >= sound_timer) {
+            sound_stop();
+        } else {
+            sound_timer -= elapsed_ms;
+        }
+    }
+}
+
+void sound_stop() {
+    TCCR1A = 0;
+    TCCR1B = 0;
+    PORTB &= ~(1 << PB1);  // Ensure buzzer is off
+    sound_active = 0;
+    current_sound_mode = SOUND_NONE;
+}
 
 void buzzer_init() {
-    // Set BUZZER_PIN as an output
-    DDRB |= (1 << BUZZER_PIN);
+    DDRB |= (1 << PB1); // Set PB1 as output
+    PORTB &= ~(1 << PB1); // Ensure buzzer is off initially
 }
 
-void buzzer_on() {
-    // Set BUZZER_PIN high
-    PORTB |= (1 << BUZZER_PIN);
+void play_victory_sound() {
+    current_note_index = 0;
+    current_sound_mode = SOUND_VICTORY;
+    victory_playing = 1;
+    sound_play(victory_notes[0].freq, victory_notes[0].duration, SOUND_VICTORY);
 }
 
-void buzzer_off() {
-    // Set BUZZER_PIN low
-    PORTB &= ~(1 << BUZZER_PIN);
-}
-void success_sound() {
-    play_note(880, 100);   // A5, short
-    _delay_ms(50);
-    play_note(988, 100);   // B5
-    _delay_ms(50);
-    play_note(1046, 100);  // C6
-}
+void update_victory_sound(uint16_t elapsed_ms) {
+    sound_update(elapsed_ms);
 
-
-void error_sound() {
-    play_note(220, 150);  // Low buzz
-    _delay_ms(50);
-    play_note(220, 150);
-}
-
-
-// void play_note(unsigned short freq)
-// {
-//     unsigned long period = 1000000UL / freq;
-//     unsigned long loop_delay = (period / 2) / 10;
-
-//     for (unsigned short i = 0; i < freq; i++) {
-//         PORTB |= (1 << PB1);
-
-//         for (unsigned long d = 0; d < loop_delay; d++) {
-//             _delay_us(10);
-//         }
-
-//         PORTB &= ~(1 << PB1);
-
-//         for (unsigned long d = 0; d < loop_delay; d++) {
-//             _delay_us(10);
-//         }
-//     }
-// }
-
-void play_note(unsigned short freq, unsigned short duration_ms) {
-    unsigned long period = 1000000UL / freq;
-    unsigned long half_period = period / 2;
-    unsigned long cycles = (1000UL * duration_ms) / period;
-
-    for (unsigned long i = 0; i < cycles; i++) {
-        PORTB |= (1 << PB1);
-
-        for (unsigned long d = 0; d < (half_period / 10); d++) {
-            _delay_us(10);
-        }
-
-        PORTB &= ~(1 << PB1);
-
-        for (unsigned long d = 0; d < (half_period / 10); d++) {
-            _delay_us(10);
+    if (victory_playing && !sound_active) {
+        current_note_index++;
+        if (current_note_index < VICTORY_NOTE_COUNT) {
+            Note note = victory_notes[current_note_index];
+            sound_play(note.freq, note.duration, SOUND_VICTORY);
+        } else {
+            victory_playing = 0;  // Done
         }
     }
 }

@@ -4,38 +4,24 @@
 #include <stdint.h>
 #include <avr/io.h>
 
-#define BUZZER_PIN PB1  // Connect buzzer to PD6
+#define BUZZER_PIN PB1  // Connect buzzer to PB1
 
-/**
- * @brief Initializes the buzzer pin.
- *
- * Configures the designated buzzer pin as an output.
- * This must be called before using other buzzer functions.
- */
+// Sound priority levels
+typedef enum {
+    SOUND_NONE,
+    SOUND_VOICE,
+    SOUND_VICTORY
+} SoundMode;
+
 void buzzer_init(void);
 
-/**
- * @brief Turns the buzzer on.
- *
- * Sets the buzzer pin high to activate the buzzer.
- */
-void buzzer_on(void);
+// Sound control with priority support
+void sound_play(uint16_t freq, uint16_t duration_ms, SoundMode mode);
+void sound_update(uint16_t elapsed_ms);
+void sound_stop(void);
 
-/**
- * @brief Turns the buzzer off.
- *
- * Sets the buzzer pin low to deactivate the buzzer.
- */
-void buzzer_off(void);
-
-/**
- * @brief Activates the buzzer for a specified duration.
- *
- * Turns the buzzer on, waits for the specified time (in milliseconds),
- * then turns it off.
- */
-void play_note(unsigned short freq, unsigned short duration_ms);
-void success_sound(void);
-void error_sound(void);
+// Victory jingle
+void play_victory_sound(void);
+void update_victory_sound(uint16_t elapsed_ms);
 
 #endif

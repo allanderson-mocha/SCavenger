@@ -59,6 +59,7 @@ int32_t get_altitude(void) {
     */
    return altitude;
 }
+
 // Read temperature from MPL3115A2 in Celsius
 float get_temperature(void) {
     uint8_t wbuf[1] = { 0x04 };  // OUT_T_MSB register

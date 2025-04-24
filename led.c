@@ -1,104 +1,84 @@
 #include "led.h"
-#include <util/delay.h>
 
-#define DOT_DURATION 200
-#define DASH_DURATION 600
-#define SYMBOL_GAP 200
-#define LETTER_GAP 600
-#define WORD_GAP 1000
+// Morse struct and sequence
+typedef struct {
+    uint8_t on;        // 1 = LED ON, 0 = LED OFF
+    uint16_t duration; // Duration in milliseconds
+} MorseStep;
+
+#define UNIT 200
+#define PAUSE_DURATION 10000
+
+MorseStep morse_freeze_me_sequence[] = {
+    // F: ..-.
+    {1, UNIT}, {0, UNIT}, {1, UNIT}, {0, UNIT},
+    {1, UNIT * 3}, {0, UNIT}, {1, UNIT}, {0, UNIT * 3},
+    // R: .-.
+    {1, UNIT}, {0, UNIT}, {1, UNIT * 3}, {0, UNIT},
+    {1, UNIT}, {0, UNIT * 3},
+    // E
+    {1, UNIT}, {0, UNIT * 3},
+    // E
+    {1, UNIT}, {0, UNIT * 3},
+    // Z: --..
+    {1, UNIT * 3}, {0, UNIT}, {1, UNIT * 3}, {0, UNIT},
+    {1, UNIT}, {0, UNIT}, {1, UNIT}, {0, UNIT * 3},
+    // E
+    {1, UNIT}, {0, UNIT * 7},
+    // M: --
+    {1, UNIT * 3}, {0, UNIT}, {1, UNIT * 3}, {0, UNIT * 3},
+    // E
+    {1, UNIT}, {0, UNIT * 7},
+};
+const uint8_t morse_sequence_length = sizeof(morse_freeze_me_sequence) / sizeof(MorseStep);
+
+// Internal state variables
+static uint16_t morse_timer = 0;
+static uint32_t pause_timer = 0;
+static uint8_t morse_index = 0;
+static uint8_t in_pause = 0;
 
 void led_init(void) {
-    // Set LED pins as output
     DDRB |= (1 << LED1) | (1 << LED2); 
     DDRD |= (1 << LED3);
 }
 
-void led_on(uint8_t port, uint8_t pin) {
-    if (port == PORTB) PORTB |= (1 << pin);
-    else if (port == PORTD) PORTD |= (1 << pin);
-}
-
-void led_off(uint8_t port, uint8_t pin) {
-    if (port == PORTB) PORTB &= ~(1 << pin);
-    else if (port == PORTD) PORTD &= ~(1 << pin);
-}
-
-void led_blink(uint8_t port, uint8_t pin, uint16_t duration_ms) {
-    led_on(port, pin);
-
-    for (uint16_t i = 0; i < duration_ms; i++) {
-        _delay_ms(1);
+void morse_update(uint16_t elapsed_ms) {
+    if (in_pause) {
+        pause_timer += elapsed_ms;
+        if (pause_timer >= PAUSE_DURATION) {
+            pause_timer = 0;
+            morse_index = 0;
+            in_pause = 0;
+        }
+        return;
     }
 
-    led_off(port, pin);
-    _delay_ms(100);
+    MorseStep step = morse_freeze_me_sequence[morse_index];
+
+    if (step.on) morse_led_on();
+    else morse_led_off();
+
+    morse_timer += elapsed_ms;
+
+    if (morse_timer >= step.duration) {
+        morse_timer = 0;
+        morse_index++;
+        if (morse_index >= morse_sequence_length) {
+            morse_led_off();
+            in_pause = 1;
+        }
+    }
 }
-void morse_led_on() {
+
+void morse_led_on(void) {
     PORTB |= (1 << LED1);
     PORTB |= (1 << LED2);
     PORTD |= (1 << LED3);
 }
 
-void morse_led_off() {
+void morse_led_off(void) {
     PORTB &= ~(1 << LED1);
     PORTB &= ~(1 << LED2);
     PORTD &= ~(1 << LED3);
 }
-
-void morse_dot() {
-    morse_led_on();
-    _delay_ms(DOT_DURATION);
-    morse_led_off();
-    _delay_ms(SYMBOL_GAP);
-}
-
-void morse_dash() {
-    morse_led_on();
-    _delay_ms(DASH_DURATION);
-    morse_led_off();
-    _delay_ms(SYMBOL_GAP);
-}
-
-void morse_letter_gap() {
-    _delay_ms(LETTER_GAP);
-}
-
-void morse_word_gap() {
-    _delay_ms(WORD_GAP);
-}
-void morse_freeze_me() {
-    // Morse code for "FREEZE ME"
-
-    // F: ..-.
-    morse_dot(); morse_dot(); morse_dash(); morse_dot();
-    morse_letter_gap();
-
-    // R: .-.
-    morse_dot(); morse_dash(); morse_dot();
-    morse_letter_gap();
-
-    // E
-    morse_dot();
-    morse_letter_gap();
-
-    // E
-    morse_dot();
-    morse_letter_gap();
-
-    // Z: --..
-    morse_dash(); morse_dash(); morse_dot(); morse_dot();
-    morse_letter_gap();
-
-    // E
-    morse_dot();
-    morse_word_gap();
-
-    // M: --
-    morse_dash(); morse_dash();
-    morse_letter_gap();
-
-    // E
-    morse_dot();
-    morse_word_gap();
-}
-

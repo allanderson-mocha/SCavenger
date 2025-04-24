@@ -211,24 +211,10 @@ int main(void) {
     lcd_init();
     buzzer_init();
     led_init();
-    //play_note(440); // commented out to not make sound at this time
     light_init();
     altimeter_init();
     setup_buttons();
     reset_game();
-
-    // game.puzzle_index = 1;
-    // game.mode = MODE_PUZZLE;
-    // game.puzzle_complete = 0;
-
-
-    // led_blink(PORTB, LED1, 250);  // Dot
-    // led_blink(PORTB, LED1, 500);  // Dash
-    
-    // // Blink Morse Code: dot-dot-dash (example)
-    // led_blink(PORTB, LED2, 200);  // Dot
-    // led_blink(PORTB, LED2, 200);  // Dot
-    // led_blink(PORTB, LED2, 600);  // Dash
 
     while (1) {
         if (power_button_pressed) {
@@ -305,6 +291,7 @@ int main(void) {
             float current_light = get_light();
             if ((game.initial_light > BRIGHT_THRESHOLD && current_light < BRIGHT_THRESHOLD) ||
                 (game.initial_light < BRIGHT_THRESHOLD && current_light > BRIGHT_THRESHOLD)) {
+                success_sound(); // PLAY SUCCESS SOUND
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
                 game.puzzle_index++;
@@ -312,6 +299,10 @@ int main(void) {
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
             }
+            // else{
+            //     error_sound();
+            // }
+
         }
 
         if (!dialogue.finished) say_step(&dialogue);
@@ -336,13 +327,16 @@ int main(void) {
         //     // Temperature check using MPL3115A2
         //     float tempC = get_temperature();  // <-- from altimeter.c
         //     if (tempC < 15.0) {  // cold enough to complete puzzle
+        //         success_sound();  // Puzzle solved!
         //         game.puzzle_complete = 1;
         //         game.mode = MODE_DIALOGUE;
         //         game.puzzle_index++;
         //         game.dialogue_index = 0;
         //         game.clue_menu_open = 0;
         //         init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
-        //     }
+        //     } else {
+        //         error_sound();
+        //       }
         // }
 
         update_display();

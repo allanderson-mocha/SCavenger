@@ -22,5 +22,7 @@ void accel_init(void);
  * @param coords Pointer to an array of 3 int16_t values to store X, Y, and Z axis data.
  */
 void get_accel(int16_t* coords);
+uint8_t detect_step(int16_t z_val);
+
 
 #endif

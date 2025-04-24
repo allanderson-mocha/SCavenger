@@ -23,7 +23,8 @@ void altimeter_init(void);
  *
  * @return The measured altitude.
  */
-int32_t get_altitude(void);
+// int32_t get_altitude(void);
+float get_altitude(void);
 float get_temperature(void);
 
 

@@ -6,6 +6,9 @@
 #include "i2c.h"
 
 #define LIS3DH_WRITE (0x18 << 1)
+// two static variables
+static int16_t prev_z = 0;
+static uint8_t step_cooldown = 0;
 
 void accel_init() {
     char buffer[17];
@@ -42,6 +45,22 @@ void get_accel(int16_t* coords) {
     coords[1] = y;
     coords[2] = z;
 
+}
+uint8_t detect_step(int16_t z_val) {
+    int16_t delta = z_val - prev_z;
+    prev_z = z_val;
+
+    // Avoid multiple counts from noise or bounce
+    if (step_cooldown > 0) {
+        step_cooldown--;
+        return 0;
+    }
+
+    if (delta > 100 || delta < -100) { // Tune this threshold!
+        step_cooldown = 10;  // simple debounce
+        return 1;
+    }
+    return 0;
 }
 
 /*

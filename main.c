@@ -11,7 +11,19 @@
 #include "buzz.h"
 #include "led.h"
 #include "altimeter.h"
-#include "main.h"
+
+
+#define BRIGHT_THRESHOLD 5.0
+#define MAX_CHARS_PER_LINE 20
+#define MAX_LCD_LINES 4
+#define PUZZLE_COUNT 6
+
+#define POWER_BUTTON_PIN PC2
+#define CLUE_BUTTON_PIN  PC1
+#define BACK_BUTTON_PIN  PC0
+#define NEXT_BUTTON_PIN  PC3
+
+#define SUCCESS_TEXT "Well done! Continue my story by pressing NEXT."
 
 volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
@@ -19,6 +31,33 @@ volatile uint8_t back_button_pressed = 0;
 volatile uint8_t next_button_pressed = 0;
 
 uint8_t display_dirty = 1;
+
+typedef enum {
+    MODE_DIALOGUE,
+    MODE_PUZZLE
+} SystemMode;
+
+typedef enum {
+    SCREEN_PROMPT,
+    SCREEN_CLUE1,
+    SCREEN_CLUE2,
+    SCREEN_CLUE3,
+    SCREEN_CLUE_CONFIRM,
+    SCREEN_NO_CLUES,
+    SCREEN_CLUE_MENU
+} PuzzleScreen;
+
+typedef struct {
+    uint8_t puzzle_index;
+    SystemMode mode;
+    uint8_t clue_progress;
+    PuzzleScreen current_screen;
+    uint8_t dialogue_index;
+    uint8_t power_on;
+    uint8_t puzzle_complete;
+    float initial_light;
+    uint8_t clue_menu_open;
+} GameState;
 
 GameState game;
 
@@ -86,8 +125,8 @@ const char* puzzle_prompts[PUZZLE_COUNT] = {
 const char* puzzle_clues[PUZZLE_COUNT][3] = {
     {"You might have to get up...", "Something in your room controls brightness!", "Try flipping a light switch."},
     {"Do you see that?", "I recognize that pattern... Morse, right?", "Do as it says! FREEZE me!"},
-    {"Clue 1", "Clue 2", "Clue 3"},
-    {"Clue 1", "Clue 2", "Clue 3"},
+    {"The sky is the limit", "Are there any hills?", "Perhaps a lil higher?"},
+    {"It's a nice day for a walk", "Hurry, before time runs out", "Can't be sitting 'round all day"},
     {"Clue 1", "Clue 2", "Clue 3"},
     {"Clue 1", "Clue 2", "Clue 3"}
 };
@@ -107,6 +146,10 @@ int main(void) {
     setup_buttons();
     reset_game();
 
+    
+    int16_t accel_coords[3]; // For accel data
+    uint16_t step_count = 0; // To keep track of the steps taken
+    
     while (1) {
         if (power_button_pressed) {
             power_button_pressed = 0;
@@ -199,8 +242,6 @@ int main(void) {
             morse_update(25); // Flash Morse code on all 3 LEDs
             float tempC = get_temperature();  // Temperature check using MPL3115A2
             if (tempC > 24.0) {  // hot enough to complete puzzle (TODO)
-                play_victory_sound();
-                morse_led_off();
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
                 game.puzzle_index++;
@@ -209,6 +250,7 @@ int main(void) {
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
             }
         }
+
 
         if (!dialogue.finished) say_step(&dialogue);
 
@@ -285,6 +327,7 @@ void reset_game(void) {
     game.puzzle_complete = 0;
     game.initial_light = get_light();
     game.clue_menu_open = 0;
+    game.base_altitude = get_altitude();
     init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
 }
 

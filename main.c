@@ -23,7 +23,7 @@ uint8_t display_dirty = 1;
 GameState game;
 
 const char* puzzle0_dialogue[] = {
-    "Waking up... you're here! The journal worked!",
+    "Hey... you're here! The journal worked!",
     "When I was young, I loved building things.",
     "I used to take apart clocks just to see how they ticked.",
     "This journal is the last thing I built.",

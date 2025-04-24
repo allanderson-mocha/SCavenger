@@ -239,6 +239,7 @@ int main(void) {
             float current_light = get_light();
             if ((game.initial_light > BRIGHT_THRESHOLD && current_light < BRIGHT_THRESHOLD) ||
                 (game.initial_light < BRIGHT_THRESHOLD && current_light > BRIGHT_THRESHOLD)) {
+                success_sound(); // PLAY SUCCESS SOUND
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
                 game.puzzle_index++;
@@ -246,6 +247,10 @@ int main(void) {
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
             }
+            // else{
+            //     error_sound();
+            // }
+
         }
         
         // Puzzle 2: Morse Code Challenge - "Freeze Me"

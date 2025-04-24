@@ -33,9 +33,9 @@ void buzzer_off(void);
  *
  * Turns the buzzer on, waits for the specified time (in milliseconds),
  * then turns it off.
- *
- * @param time Duration to beep in milliseconds.
  */
-// void beep(uint16_t time);
-void play_note(unsigned short freq);
+void play_note(unsigned short freq, unsigned short duration_ms);
+void success_sound(void);
+void error_sound(void);
+
 #endif

@@ -1,5 +1,6 @@
 /* Puzzle Box Main - Puzzle 1: Light Sensor Challenge */
 /* Puzzle Box Main - Puzzle 2: Morse Code/Temperature Sensor Challenge */
+/* Puzzle Box Main - Puzzle 4: Step Counter */
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -11,6 +12,7 @@
 #include "buzz.h"
 #include "led.h"
 #include "altimeter.h"
+#include "accelerometer.h"
 
 
 #define BRIGHT_THRESHOLD 5.0
@@ -24,6 +26,8 @@
 #define NEXT_BUTTON_PIN  PC3
 
 #define SUCCESS_TEXT "Well done! Continue my story by pressing NEXT."
+#define STEP_GOAL 60
+#define ALTITUDE_THRESHOLD 1  // meters
 
 volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
@@ -56,6 +60,7 @@ typedef struct {
     uint8_t power_on;
     uint8_t puzzle_complete;
     float initial_light;
+    float base_altitude;             // ADD
     uint8_t clue_menu_open;
 } GameState;
 
@@ -135,7 +140,24 @@ const char* clue_menu_text = "Click NEXT to unlock a clue.";
 const char* clue_confirm_text = "Are you sure you want a clue?";
 const char* no_clues_text = "No clues remain.";
 
+typedef struct {
+    const char* fullText;
+    int charIndex;
+    int row;
+    int col;
+    uint8_t finished;
+} DialogueState;
+
 DialogueState dialogue;
+
+void morse_update(uint16_t elapsed_ms);
+void init_say(DialogueState* state, const char* text);
+void say_step(DialogueState* state);
+void reset_game(void);
+void setup_buttons(void);
+void update_display(void);
+void morse_update(uint16_t elapsed_ms);
+// DialogueState dialogue;
 
 int main(void) {
     lcd_init();
@@ -143,6 +165,7 @@ int main(void) {
     led_init();
     light_init();
     altimeter_init();
+    accel_init(); 
     setup_buttons();
     reset_game();
 
@@ -241,7 +264,8 @@ int main(void) {
         if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
             morse_update(25); // Flash Morse code on all 3 LEDs
             float tempC = get_temperature();  // Temperature check using MPL3115A2
-            if (tempC > 24.0) {  // hot enough to complete puzzle (TODO)
+            if (tempC > 4.0) {  // hot enough to complete puzzle (TODO)
+                play_victory_sound();
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
                 game.puzzle_index++;
@@ -250,8 +274,60 @@ int main(void) {
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
             }
         }
+        // float base_altitude = get_altitude();
 
+        // Puzzle 3: 
+        // if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+        //     float current_alt = get_altitude();
+        //     float gain = current_alt - game.base_altitude;
+        
+        //     // 📺 LCD Output for Altitude Gain
+        //     char alt_buf[17];
+        //     snprintf(alt_buf, sizeof(alt_buf), "Gain: %.1f m", gain);
+        //     lcd_moveto(0, 0);
+        //     lcd_stringout(alt_buf);
+        
+        //     if (gain >= ALTITUDE_THRESHOLD) {
+        //         play_victory_sound();
+        //         game.puzzle_complete = 1;
+        //         game.mode = MODE_DIALOGUE;
+        //         game.puzzle_index++;  // move to Puzzle 4
+        //         game.dialogue_index = 0;
+        //         game.clue_menu_open = 0;
+        //         init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+        //     }
+        // }
+        
+        // Step counter (Puzzle 4)
+        static uint16_t prev_step_count = 0;
+        if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+            get_accel(accel_coords);
 
+            if (detect_step(accel_coords[2])) {
+                step_count++;
+            }
+
+            // Only update LCD if the step count changed
+            if (step_count != prev_step_count) {
+                prev_step_count = step_count;
+
+                char step_buf[17];
+                snprintf(step_buf, sizeof(step_buf), "Steps: %d/%d", step_count, STEP_GOAL);
+                lcd_writecommand(0x01);  // Clear screen before writing new value
+                lcd_moveto(0, 0);
+                lcd_stringout(step_buf);
+            }
+
+            if (step_count >= STEP_GOAL) {
+                play_victory_sound();
+                game.puzzle_complete = 1;
+                game.mode = MODE_DIALOGUE;
+                game.puzzle_index++;  // move to Puzzle 5
+                game.dialogue_index = 0;
+                game.clue_menu_open = 0;
+                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+            }
+        }
         if (!dialogue.finished) say_step(&dialogue);
 
         update_display();
@@ -328,6 +404,7 @@ void reset_game(void) {
     game.initial_light = get_light();
     game.clue_menu_open = 0;
     game.base_altitude = get_altitude();
+    // step_count = 0;
     init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
 }
 

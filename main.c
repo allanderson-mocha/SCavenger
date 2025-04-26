@@ -11,6 +11,7 @@
 #include "lcd.h"
 #include "buzz.h"
 #include "led.h"
+#include "i2c.h"
 #include "altimeter.h"
 #include "accelerometer.h"
 
@@ -27,7 +28,7 @@
 
 #define SUCCESS_TEXT "Well done! Continue my story by pressing NEXT."
 #define STEP_GOAL 69
-#define ALTITUDE_THRESHOLD 1  // meters
+#define ALTITUDE_THRESHOLD 10  // meters
 
 volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
@@ -60,7 +61,7 @@ typedef struct {
     uint8_t power_on;
     uint8_t puzzle_complete;
     float initial_light;
-    float base_altitude;             // ADD
+    uint16_t base_altitude;             // ADD
     uint8_t clue_menu_open;
 } GameState;
 
@@ -121,8 +122,8 @@ const char** puzzle_dialogues[PUZZLE_COUNT] = {
 const char* puzzle_prompts[PUZZLE_COUNT] = {
     NULL,
     "Puzzle #2",
-    "Puzzle #3: .",
-    "Puzzle 4 prompt",
+    "Puzzle #3",
+    "Puzzle #4: .",
     "Puzzle 5 prompt",
     "Puzzle 6 prompt"
 };
@@ -160,6 +161,7 @@ void morse_update(uint16_t elapsed_ms);
 // DialogueState dialogue;
 
 int main(void) {
+    i2c_init(72);
     lcd_init();
     buzzer_init();
     led_init();
@@ -168,7 +170,6 @@ int main(void) {
     accel_init(); 
     setup_buttons();
     reset_game();
-
     
     int16_t accel_coords[3]; // For accel data
     uint16_t step_count = 0; // To keep track of the steps taken
@@ -273,31 +274,30 @@ int main(void) {
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
                 morse_led_off();
+                game.base_altitude = get_altitude();
             }
         }
-        // float base_altitude = get_altitude();
 
-        // Puzzle 3: 
-        // if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
-        //     float current_alt = get_altitude();
-        //     float gain = current_alt - game.base_altitude;
+        // Puzzle 3: Altitude
+        if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+            uint16_t current_alt = get_altitude();
+            int16_t gain = current_alt - game.base_altitude;
+
+            char buffer[17];
+            snprintf(buffer, sizeof(buffer), "%d", gain);
+            lcd_moveto(0, 11);
+            lcd_stringout(buffer);
         
-        //     // 📺 LCD Output for Altitude Gain
-        //     char alt_buf[17];
-        //     snprintf(alt_buf, sizeof(alt_buf), "Gain: %.1f m", gain);
-        //     lcd_moveto(0, 0);
-        //     lcd_stringout(alt_buf);
-        
-        //     if (gain >= ALTITUDE_THRESHOLD) {
-        //         play_victory_sound();
-        //         game.puzzle_complete = 1;
-        //         game.mode = MODE_DIALOGUE;
-        //         game.puzzle_index++;  // move to Puzzle 4
-        //         game.dialogue_index = 0;
-        //         game.clue_menu_open = 0;
-        //         init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
-        //     }
-        // }
+            if (gain >= ALTITUDE_THRESHOLD) {
+                play_victory_sound();
+                game.puzzle_complete = 1;
+                game.mode = MODE_DIALOGUE;
+                game.puzzle_index++;  // move to Puzzle 4
+                game.dialogue_index = 0;
+                game.clue_menu_open = 0;
+                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+            }
+        }
         
         // Puzzle 4: Step Counter
         static uint16_t prev_step_count = 0;

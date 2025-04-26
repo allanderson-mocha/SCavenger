@@ -121,7 +121,7 @@ const char** puzzle_dialogues[PUZZLE_COUNT] = {
 const char* puzzle_prompts[PUZZLE_COUNT] = {
     NULL,
     "Puzzle #2",
-    "Puzzle 3 prompt",
+    NULL,
     "Puzzle 4 prompt",
     "Puzzle 5 prompt",
     "Puzzle 6 prompt"
@@ -264,7 +264,7 @@ int main(void) {
         if (game.puzzle_index == 1 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
             morse_update(25); // Flash Morse code on all 3 LEDs
             float tempC = get_temperature();  // Temperature check using MPL3115A2
-            if (tempC > 4.0) {  // hot enough to complete puzzle (TODO)
+            if (tempC > 24.0) {  // hot enough to complete puzzle (TODO)
                 play_victory_sound();
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
@@ -272,6 +272,7 @@ int main(void) {
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                morse_led_off();
             }
         }
         // float base_altitude = get_altitude();
@@ -298,9 +299,9 @@ int main(void) {
         //     }
         // }
         
-        // Step counter (Puzzle 4)
+        // Puzzle 4: Step Counter
         static uint16_t prev_step_count = 0;
-        if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
+        if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
             get_accel(accel_coords);
 
             if (detect_step(accel_coords[2])) {
@@ -312,7 +313,7 @@ int main(void) {
                 prev_step_count = step_count;
 
                 char step_buf[17];
-                snprintf(step_buf, sizeof(step_buf), "Steps: %d/%d", step_count, STEP_GOAL);
+                snprintf(step_buf, sizeof(step_buf), "Puzzle #3: %d/%d", step_count, STEP_GOAL);
                 lcd_writecommand(0x01);  // Clear screen before writing new value
                 lcd_moveto(0, 0);
                 lcd_stringout(step_buf);
@@ -328,6 +329,7 @@ int main(void) {
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
             }
         }
+
         if (!dialogue.finished) say_step(&dialogue);
 
         update_display();

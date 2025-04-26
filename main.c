@@ -26,7 +26,7 @@
 #define NEXT_BUTTON_PIN  PC3
 
 #define SUCCESS_TEXT "Well done! Continue my story by pressing NEXT."
-#define STEP_GOAL 60
+#define STEP_GOAL 69
 #define ALTITUDE_THRESHOLD 1  // meters
 
 volatile uint8_t power_button_pressed = 0;
@@ -121,7 +121,7 @@ const char** puzzle_dialogues[PUZZLE_COUNT] = {
 const char* puzzle_prompts[PUZZLE_COUNT] = {
     NULL,
     "Puzzle #2",
-    NULL,
+    "Puzzle #3: .",
     "Puzzle 4 prompt",
     "Puzzle 5 prompt",
     "Puzzle 6 prompt"
@@ -301,29 +301,44 @@ int main(void) {
         
         // Puzzle 4: Step Counter
         static uint16_t prev_step_count = 0;
-        if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
+        static uint8_t elapsed_ms = 0;
+
+        if (game.puzzle_index == 3 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
             get_accel(accel_coords);
 
             if (detect_step(accel_coords[2])) {
                 step_count++;
             }
 
-            // Only update LCD if the step count changed
-            if (step_count != prev_step_count) {
-                prev_step_count = step_count;
-
-                char step_buf[17];
-                snprintf(step_buf, sizeof(step_buf), "Puzzle #3: %d/%d", step_count, STEP_GOAL);
-                lcd_writecommand(0x01);  // Clear screen before writing new value
-                lcd_moveto(0, 0);
-                lcd_stringout(step_buf);
+            elapsed_ms++;  // We delay 25 ms per loop
+            if (elapsed_ms >= 40) { // 25 ms * 40 = 1000ms = 1 second
+                elapsed_ms = 0;
+                if (step_count > 0) {
+                    step_count--;
+                }
             }
+
+            if (step_count != prev_step_count) {
+                uint8_t row = (step_count+10) / 40;
+                uint8_t col = (step_count+10) - (40 * row);
+                if (step_count > prev_step_count) {
+                    lcd_moveto(row, col);
+                    lcd_writedata('.');
+                } else {
+                    row = (prev_step_count+10) / 40;
+                    col = (prev_step_count+10) - (40 * row);
+                    lcd_moveto(row, col);
+                    lcd_writedata(' ');
+                }
+                prev_step_count = step_count;  // Update after
+            }
+            
 
             if (step_count >= STEP_GOAL) {
                 play_victory_sound();
                 game.puzzle_complete = 1;
                 game.mode = MODE_DIALOGUE;
-                game.puzzle_index++;  // move to Puzzle 5
+                game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);

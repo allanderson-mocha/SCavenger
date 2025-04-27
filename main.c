@@ -132,10 +132,10 @@ const char* puzzle_prompts[PUZZLE_COUNT] = {
 const char* puzzle_clues[PUZZLE_COUNT][3] = {
     {"You might have to get up...", "Something in your room controls brightness!", "Try flipping a light switch."},
     {"Do you see that?", "I recognize that pattern... Morse, right?", "Do as it says! FREEZE me!"},
-    {"The sky is the limit", "Are there any hills?", "Perhaps a lil higher?"},
-    {"It's a nice day for a walk", "Hurry, before time runs out", "Can't be sitting 'round all day"},
-    {"Clue 1", "Clue 2", "Clue 3"},
-    {"Clue 1", "Clue 2", "Clue 3"}
+    {"The sky is the limit!", "See any hills?", "Perhaps a lil' higher?"},
+    {"It's a nice day for a walk.", "Don't stop!", "Can't be sitting 'round all day!"},
+    {"You might need a map.", "Looks like a destination to me...", "Visit the coordinates!"},
+    {"...", "...", "..."}
 };
 
 const char* clue_menu_text = "Click NEXT to unlock a clue.";
@@ -159,7 +159,6 @@ void reset_game(void);
 void setup_buttons(void);
 void update_display(void);
 void morse_update(uint16_t elapsed_ms);
-// DialogueState dialogue;
 
 int main(void) {
     i2c_init(72);

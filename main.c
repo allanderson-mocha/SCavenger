@@ -5,6 +5,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
+#include <avr/pgmspace.h>
 #include <stdio.h>
 #include <string.h>
 #include "light_sensor.h"
@@ -15,21 +16,14 @@
 #include "altimeter.h"
 #include "accelerometer.h"
 #include "solenoid.h"
+#include "gps.h"
+#include "main.h"
 
-
-#define BRIGHT_THRESHOLD 5.0
-#define MAX_CHARS_PER_LINE 20
-#define MAX_LCD_LINES 4
-#define PUZZLE_COUNT 6
-
-#define POWER_BUTTON_PIN PC2
-#define CLUE_BUTTON_PIN  PC1
-#define BACK_BUTTON_PIN  PC0
-#define NEXT_BUTTON_PIN  PC3
-
-#define SUCCESS_TEXT "Well done! Continue my story by pressing NEXT."
 #define STEP_GOAL 69
 #define ALTITUDE_THRESHOLD 10  // meters
+#define BUFFER_SIZE 64
+
+char progmem_buffer[BUFFER_SIZE];
 
 volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
@@ -38,80 +32,90 @@ volatile uint8_t next_button_pressed = 0;
 
 uint8_t display_dirty = 1;
 
-typedef enum {
-    MODE_DIALOGUE,
-    MODE_PUZZLE
-} SystemMode;
-
-typedef enum {
-    SCREEN_PROMPT,
-    SCREEN_CLUE1,
-    SCREEN_CLUE2,
-    SCREEN_CLUE3,
-    SCREEN_CLUE_CONFIRM,
-    SCREEN_NO_CLUES,
-    SCREEN_CLUE_MENU
-} PuzzleScreen;
-
-typedef struct {
-    uint8_t puzzle_index;
-    SystemMode mode;
-    uint8_t clue_progress;
-    PuzzleScreen current_screen;
-    uint8_t dialogue_index;
-    uint8_t power_on;
-    uint8_t puzzle_complete;
-    float initial_light;
-    uint16_t base_altitude;             // ADD
-    uint8_t clue_menu_open;
-} GameState;
-
 GameState game;
 
-const char* puzzle0_dialogue[] = {
-    "Hey... you're here! The journal worked!",
-    "When I was young, I loved building things.",
-    "I used to take apart clocks just to see how they ticked.",
-    "This journal is the last thing I built.",
-    "Will you help me finish it?", NULL
+const char puzzle0_line0[] PROGMEM = "Hey... you're here! The journal worked!";
+const char puzzle0_line1[] PROGMEM = "When I was young, I loved building things.";
+const char puzzle0_line2[] PROGMEM = "I used to take apart clocks just to see how they ticked.";
+const char puzzle0_line3[] PROGMEM = "This journal is the last thing I built.";
+const char puzzle0_line4[] PROGMEM = "Will you help me finish it?";
+
+const char* const puzzle0_dialogue[] PROGMEM = {
+    puzzle0_line0,
+    puzzle0_line1,
+    puzzle0_line2,
+    puzzle0_line3,
+    puzzle0_line4,
+    NULL
 };
 
-const char* puzzle1_dialogue[] = {
-    SUCCESS_TEXT,
-    "I met someone once. They smelled like old paper and hope.",
-    "We dreamed of seeing the world, but time got in the way.",
-    "When love finds you, don't waste it.", NULL
+const char puzzle1_line0[] PROGMEM = "Well done! Continue my story by pressing NEXT.";
+const char puzzle1_line1[] PROGMEM = "I met someone once. They smelled like old paper and hope.";
+const char puzzle1_line2[] PROGMEM = "We dreamed of seeing the world, but time got in the way.";
+const char puzzle1_line3[] PROGMEM = "When love finds you, don't waste it.";
+
+const char* const puzzle1_dialogue[] PROGMEM = {
+    puzzle1_line0,
+    puzzle1_line1,
+    puzzle1_line2,
+    puzzle1_line3,
+    NULL
 };
 
-const char* puzzle2_dialogue[] = {
-    SUCCESS_TEXT,
-    "When the doctor said 'terminal,' I just stared at the ceiling.",
-    "I felt still. Like I had already left.",
-    "That's why I made this. To move when I couldn't.", NULL
+const char puzzle2_line0[] PROGMEM = "Well done! Continue my story by pressing NEXT.";
+const char puzzle2_line1[] PROGMEM = "When the doctor said 'terminal,' I just stared at the ceiling.";
+const char puzzle2_line2[] PROGMEM = "I felt still. Like I had already left.";
+const char puzzle2_line3[] PROGMEM = "That's why I made this. To move when I couldn't.";
+
+const char* const puzzle2_dialogue[] PROGMEM = {
+    puzzle2_line0,
+    puzzle2_line1,
+    puzzle2_line2,
+    puzzle2_line3,
+    NULL
 };
 
-const char* puzzle3_dialogue[] = {
-    SUCCESS_TEXT,
-    "I missed more sunsets than I can count.",
-    "Do one thing for me. Don't wait for a 'better time.'",
-    "You're alive. That's all the permission you need.", NULL
+const char puzzle3_line0[] PROGMEM = "Well done! Continue my story by pressing NEXT.";
+const char puzzle3_line1[] PROGMEM = "I missed more sunsets than I can count.";
+const char puzzle3_line2[] PROGMEM = "Do one thing for me. Don't wait for a 'better time.'";
+const char puzzle3_line3[] PROGMEM = "You're alive. That's all the permission you need.";
+
+
+const char* const puzzle3_dialogue[] PROGMEM = {
+    puzzle3_line0,
+    puzzle3_line1,
+    puzzle3_line2,
+    puzzle3_line3,
+    NULL
 };
 
-const char* puzzle4_dialogue[] = {
-    SUCCESS_TEXT,
-    "I used to fear being forgotten.",
-    "But maybe this is enough. A small light, passed on.",
-    "If you're still listening, maybe I'm still here.", NULL
+const char puzzle4_line0[] PROGMEM = "Well done! Continue my story by pressing NEXT.";
+const char puzzle4_line1[] PROGMEM = "I used to fear being forgotten.";
+const char puzzle4_line2[] PROGMEM = "But maybe this is enough. A small light, passed on.";
+const char puzzle4_line3[] PROGMEM = "If you're still listening, maybe I'm still here.";
+
+const char* const puzzle4_dialogue[] PROGMEM = {
+    puzzle4_line0,
+    puzzle4_line1,
+    puzzle4_line2,
+    puzzle4_line3,
+    NULL
 };
 
-const char* puzzle5_dialogue[] = {
-    SUCCESS_TEXT,
-    "I never saw the ocean, but I dreamed of it.",
-    "Let the tide carry me where I never got to go.",
-    "Thank you. Now go live something beautiful.", NULL
+const char puzzle5_line0[] PROGMEM = "Well done! Continue my story by pressing NEXT.";
+const char puzzle5_line1[] PROGMEM = "I never saw the ocean, but I dreamed of it.";
+const char puzzle5_line2[] PROGMEM = "Let the tide carry me where I never got to go.";
+const char puzzle5_line3[] PROGMEM = "Thank you. Now go live something beautiful.";
+
+const char* const puzzle5_dialogue[] PROGMEM = {
+    puzzle5_line0,
+    puzzle5_line1,
+    puzzle5_line2,
+    puzzle5_line3,
+    NULL
 };
 
-const char** puzzle_dialogues[PUZZLE_COUNT] = {
+const char* const* const puzzle_dialogues[PUZZLE_COUNT] PROGMEM = {
     puzzle0_dialogue,
     puzzle1_dialogue,
     puzzle2_dialogue,
@@ -141,14 +145,6 @@ const char* puzzle_clues[PUZZLE_COUNT][3] = {
 const char* clue_menu_text = "Click NEXT to unlock a clue.";
 const char* clue_confirm_text = "Are you sure you want a clue?";
 const char* no_clues_text = "No clues remain.";
-
-typedef struct {
-    const char* fullText;
-    int charIndex;
-    int row;
-    int col;
-    uint8_t finished;
-} DialogueState;
 
 DialogueState dialogue;
 
@@ -188,7 +184,9 @@ int main(void) {
         if (next_button_pressed) {
             next_button_pressed = 0;
             if (game.mode == MODE_DIALOGUE && dialogue.finished) {
-                if (puzzle_dialogues[game.puzzle_index][game.dialogue_index + 1] != NULL) {
+                const char* const* dialogue_array = (const char* const*)pgm_read_word(&(puzzle_dialogues[game.puzzle_index]));
+                const char* next_line_ptr = (const char*)pgm_read_word(&(dialogue_array[game.dialogue_index + 1]));
+                if (next_line_ptr != NULL) {
                     game.dialogue_index++;
                 } else {
                     game.mode = MODE_PUZZLE;
@@ -258,7 +256,7 @@ int main(void) {
                 game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
+                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
             }
         }
         
@@ -273,7 +271,7 @@ int main(void) {
                 game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
                 morse_led_off();
                 game.base_altitude = get_altitude();
             }
@@ -296,7 +294,7 @@ int main(void) {
                 game.puzzle_index++;  // move to Puzzle 4
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
             }
         }
         
@@ -342,9 +340,51 @@ int main(void) {
                 game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
             }
         }
+
+        // Puzzle #5: GPS Puzzle - Walk ~1 mile East!
+        static float latitude = 0.0;
+        static float longitude = 0.0;
+        static float target_lat = 0.0;
+        static float target_lon = 0.0;
+        static uint8_t target_initialized = 0;
+
+        if (game.puzzle_index == 5 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
+            read_gps_sentence(); // Read GPS data
+
+            if (strncmp(gps_buffer, "$GPRMC", 6) == 0 || strncmp(gps_buffer, "$GPGGA", 6) == 0) {
+                parse_gps_coordinates(gps_buffer, &latitude, &longitude);
+
+                if (latitude != 0.0f && longitude != 0.0f) {
+                    if (!target_initialized) {
+                        target_lat = latitude;                        // Same latitude
+                        target_lon = longitude + 0.0180f;             // About 1 mile east
+                        target_initialized = 1;
+                    }
+
+                    float lat_diff = latitude - target_lat;
+                    if (lat_diff < 0) lat_diff = -lat_diff;
+
+                    float lon_diff = longitude - target_lon;
+                    if (lon_diff < 0) lon_diff = -lon_diff;
+
+                    const float threshold = 0.0005f; // About ~50 feet margin
+
+                    if (lat_diff < threshold && lon_diff < threshold) {
+                        play_victory_sound();
+                        game.puzzle_complete = 1;
+                        game.mode = MODE_DIALOGUE;
+                        game.puzzle_index++;
+                        game.dialogue_index = 0;
+                        game.clue_menu_open = 0;
+                        init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                    }
+                }
+            }
+        }
+
 
         // Puzzle #6: Secret Compartment
         static uint8_t solenoid_fired = 0;
@@ -377,6 +417,17 @@ int main(void) {
 void init_say(DialogueState* state, const char* text) {
     lcd_writecommand(0x01);
     state->fullText = text;
+    state->charIndex = 0;
+    state->row = 0;
+    state->col = 0;
+    state->finished = 0;
+    display_dirty = 0;
+}
+
+void init_say_from_progmem(DialogueState* state, const char* progmem_ptr) {
+    lcd_writecommand(0x01);
+    copy_progmem_string(progmem_buffer, progmem_ptr);  // Copy to RAM
+    state->fullText = progmem_buffer;
     state->charIndex = 0;
     state->row = 0;
     state->col = 0;
@@ -442,9 +493,14 @@ void reset_game(void) {
     game.initial_light = get_light();
     game.clue_menu_open = 0;
     game.base_altitude = get_altitude();
-    // step_count = 0;
-    init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+
+    // Read correct line from PROGMEM
+    const char* const* dialogue_array = (const char* const*)pgm_read_word(&(puzzle_dialogues[game.puzzle_index]));
+    const char* line_ptr = (const char*)pgm_read_word(&(dialogue_array[0]));
+    init_say_from_progmem(&dialogue, line_ptr);  // <-- use _from_progmem
 }
+
+
 
 void setup_buttons(void) {
     DDRC &= ~((1 << POWER_BUTTON_PIN) | (1 << CLUE_BUTTON_PIN) |
@@ -475,20 +531,37 @@ void update_display(void) {
         } else {
             switch (game.current_screen) {
                 case SCREEN_PROMPT:
-                    init_say(&dialogue, puzzle_prompts[game.puzzle_index]); break;
+                    init_say(&dialogue, puzzle_prompts[game.puzzle_index]);
+                    break;
                 case SCREEN_CLUE1:
-                    init_say(&dialogue, puzzle_clues[game.puzzle_index][0]); break;
+                    init_say(&dialogue, puzzle_clues[game.puzzle_index][0]);
+                    break;
                 case SCREEN_CLUE2:
-                    init_say(&dialogue, puzzle_clues[game.puzzle_index][1]); break;
+                    init_say(&dialogue, puzzle_clues[game.puzzle_index][1]);
+                    break;
                 case SCREEN_CLUE3:
-                    init_say(&dialogue, puzzle_clues[game.puzzle_index][2]); break;
-                default: break;
+                    init_say(&dialogue, puzzle_clues[game.puzzle_index][2]);
+                    break;
+                default:
+                    break;
             }
         }
     } else if (game.mode == MODE_DIALOGUE) {
-        init_say(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
+        const char* const* dialogue_array = (const char* const*)pgm_read_word(&(puzzle_dialogues[game.puzzle_index]));
+        const char* line_ptr = (const char*)pgm_read_word(&(dialogue_array[game.dialogue_index]));
+        init_say_from_progmem(&dialogue, line_ptr);  // <-- use _from_progmem
     }
     display_dirty = 0;
+}
+
+
+void copy_progmem_string(char* dest, const char* progmem_ptr) {
+    uint8_t i = 0;
+    char c;
+    while ((c = pgm_read_byte(&(progmem_ptr[i]))) != '\0' && i < BUFFER_SIZE - 1) {
+        dest[i++] = c;
+    }
+    dest[i] = '\0';
 }
 
 ISR(PCINT1_vect) {

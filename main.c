@@ -150,6 +150,7 @@ DialogueState dialogue;
 
 void morse_update(uint16_t elapsed_ms);
 void init_say(DialogueState* state, const char* text);
+void init_current_dialogue(DialogueState* state);
 void say_step(DialogueState* state);
 void reset_game(void);
 void setup_buttons(void);
@@ -256,7 +257,8 @@ int main(void) {
                 game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
+                // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
+                init_current_dialogue(&dialogue);
             }
         }
         
@@ -271,7 +273,8 @@ int main(void) {
                 game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                init_current_dialogue(&dialogue);
                 morse_led_off();
                 game.base_altitude = get_altitude();
             }
@@ -294,7 +297,8 @@ int main(void) {
                 game.puzzle_index++;  // move to Puzzle 4
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                init_current_dialogue(&dialogue);
             }
         }
         
@@ -340,7 +344,9 @@ int main(void) {
                 game.puzzle_index++;
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
-                init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                init_current_dialogue(&dialogue);
+
             }
         }
 
@@ -379,7 +385,9 @@ int main(void) {
                         game.puzzle_index++;
                         game.dialogue_index = 0;
                         game.clue_menu_open = 0;
-                        init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                        // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+                        init_current_dialogue(&dialogue);
+
                     }
                 }
             }
@@ -433,6 +441,11 @@ void init_say_from_progmem(DialogueState* state, const char* progmem_ptr) {
     state->col = 0;
     state->finished = 0;
     display_dirty = 0;
+}
+void init_current_dialogue(DialogueState* state) {
+    const char* const* dialogue_array = (const char* const*)pgm_read_word(&(puzzle_dialogues[game.puzzle_index]));
+    const char* line_ptr = (const char*)pgm_read_word(&(dialogue_array[game.dialogue_index]));
+    init_say_from_progmem(state, line_ptr);
 }
 
 void say_voice_click(void) {

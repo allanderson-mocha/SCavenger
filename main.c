@@ -14,6 +14,7 @@
 #include "i2c.h"
 #include "altimeter.h"
 #include "accelerometer.h"
+#include "solenoid.h"
 
 
 #define BRIGHT_THRESHOLD 5.0
@@ -122,7 +123,7 @@ const char** puzzle_dialogues[PUZZLE_COUNT] = {
 const char* puzzle_prompts[PUZZLE_COUNT] = {
     NULL,
     "Puzzle #2",
-    "Puzzle #3",
+    "Puzzle #3:",
     "Puzzle #4: .",
     "Puzzle 5 prompt",
     "Puzzle 6 prompt"
@@ -169,6 +170,7 @@ int main(void) {
     altimeter_init();
     accel_init(); 
     setup_buttons();
+    solenoid_init();
     reset_game();
     
     int16_t accel_coords[3]; // For accel data
@@ -278,7 +280,7 @@ int main(void) {
             }
         }
 
-        // Puzzle 3: Altitude
+        // Puzzle #3: Altitude
         if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete) {
             uint16_t current_alt = get_altitude();
             int16_t gain = current_alt - game.base_altitude;
@@ -299,7 +301,7 @@ int main(void) {
             }
         }
         
-        // Puzzle 4: Step Counter
+        // Puzzle #4: Step Counter
         static uint16_t prev_step_count = 0;
         static uint8_t elapsed_ms = 0;
 
@@ -342,6 +344,26 @@ int main(void) {
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
                 init_say(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
+            }
+        }
+
+        // Puzzle #6: Secret Compartment
+        static uint8_t solenoid_fired = 0;
+        static uint16_t solenoid_timer = 0;
+
+        if (game.puzzle_index == 4 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
+            if (!solenoid_fired) {
+                solenoid_on();       // Turn solenoid ON
+                solenoid_fired = 1;  // Mark that we fired it
+            }
+
+            solenoid_timer++;  // We delay 25ms per loop
+            if (solenoid_timer >= 80) { // 25ms * 80 = 2000ms = 2 seconds
+                solenoid_off();
+                lcd_writecommand(0x01);
+                game.power_on = 0; 
+                solenoid_fired = 0;
+                _delay_ms(100);  
             }
         }
 

@@ -17,7 +17,7 @@
 #include "main.h"
 
 #define STEP_GOAL 69
-#define ALTITUDE_THRESHOLD 10
+#define ALTITUDE_THRESHOLD 30
 #define TEMPERATURE_THRESHOLD 24.0
 #define BUFFER_SIZE 64
 
@@ -365,14 +365,14 @@ int main(void) {
 
         // Puzzle #3: Altitude
         if (game.puzzle_index == 2 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
-            static uint8_t initialized = 0;
-            if (!initialized) {
+            static uint8_t altitude_initialized = 0;
+            if (!altitude_initialized) {
                 game.base_altitude = get_altitude();
-                initialized = 1;
+                altitude_initialized = 1;
             }
             
             int32_t current_alt = get_altitude();
-            int32_t gain = current_alt - game.base_altitude;
+            int32_t gain = labs((int32_t)(current_alt - game.base_altitude));
 
             char buffer[17];
             snprintf(buffer, sizeof(buffer), "%3d", (int)gain);
@@ -386,6 +386,7 @@ int main(void) {
                 game.puzzle_index++;  // move to Puzzle 4
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
+                altitude_initialized = 0;
                 init_current_dialogue(&dialogue);
             }
         }

@@ -29,8 +29,6 @@ volatile uint8_t clue_button_pressed = 0;
 volatile uint8_t back_button_pressed = 0;
 volatile uint8_t next_button_pressed = 0;
 
-uint8_t stored_puzzle_index EEMEM;
-
 uint8_t display_dirty = 1;
 uint8_t just_transitioned = 0;
 uint16_t step_count = 0;
@@ -228,6 +226,22 @@ int main(void) {
     int16_t accel_coords[3]; // For accel data
     
     while (1) {
+        // Reset to level 1 if POWER and CLUE pressed
+        if (power_button_pressed && clue_button_pressed) {
+            _delay_ms(5);  // Wait a little
+            if (!(PINC & (1 << POWER_BUTTON_PIN)) && !(PINC & (1 << CLUE_BUTTON_PIN))) {  // Still pressed?
+                power_button_pressed = 0;
+                clue_button_pressed = 0; 
+                game.puzzle_index = 0; 
+                eeprom_update_byte((void*)100, 0); 
+                reset_game();  
+                lcd_writecommand(0x01); 
+            } else {
+                power_button_pressed = 0;
+                clue_button_pressed = 0;
+            }
+        }
+        
         // Debounce and handle Power button
         if (power_button_pressed) {
             _delay_ms(5);  // Wait a little
@@ -332,10 +346,6 @@ int main(void) {
             }
         }
 
-        // Load Puzzle Index
-        game.puzzle_index = eeprom_read_byte(&stored_puzzle_index);
-
-
         // Puzzle #1: Light Sensor Tutorial
         if (game.mode == MODE_PUZZLE && game.puzzle_index == 0 && !game.puzzle_complete) {
             float current_light = get_light();
@@ -349,7 +359,7 @@ int main(void) {
                 game.clue_menu_open = 0;
                 // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
                 init_current_dialogue(&dialogue);
-                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+                eeprom_update_byte((void*)100, game.puzzle_index);
 
             }
         }
@@ -368,7 +378,7 @@ int main(void) {
                 // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
                 init_current_dialogue(&dialogue);
                 morse_led_off();
-                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+                eeprom_update_byte((void*)100, game.puzzle_index);
             }
         }
 
@@ -397,7 +407,7 @@ int main(void) {
                 game.clue_menu_open = 0;
                 altitude_initialized = 0;
                 init_current_dialogue(&dialogue);
-                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+                eeprom_update_byte((void*)100, game.puzzle_index);
             }
         }
         
@@ -444,7 +454,7 @@ int main(void) {
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
                 init_current_dialogue(&dialogue);
-                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+                eeprom_update_byte((void*)100, game.puzzle_index);
 
             }
         } else if (game.puzzle_index == 3 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen != SCREEN_PROMPT) {
@@ -488,7 +498,7 @@ int main(void) {
                         game.dialogue_index = 0;
                         game.clue_menu_open = 0;
                         init_current_dialogue(&dialogue);
-                        eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+                        eeprom_update_byte((void*)100, game.puzzle_index);
 
                     }
                 }
@@ -598,7 +608,12 @@ void say_step(DialogueState* state) {
 
 
 void reset_game(void) {
-    game.puzzle_index = 0;
+    uint8_t stored_index = eeprom_read_byte((void*)100);
+    if (stored_index >= PUZZLE_COUNT) {
+        stored_index = 0;
+    }
+    game.puzzle_index = 4;
+    
     game.mode = MODE_DIALOGUE;
     game.clue_progress = 0;
     game.current_screen = SCREEN_PROMPT;

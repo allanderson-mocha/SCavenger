@@ -617,7 +617,7 @@ void reset_game(void) {
     if (stored_index >= PUZZLE_COUNT) {
         stored_index = 0;
     }
-    game.puzzle_index = 4;
+    game.puzzle_index = stored_index;
     
     game.mode = MODE_DIALOGUE;
     game.clue_progress = 0;

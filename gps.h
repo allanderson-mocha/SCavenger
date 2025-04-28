@@ -14,5 +14,6 @@ char gps_serial_in(void);
 void read_gps_sentence(void);
 void parse_gps_coordinates(char* sentence, float* latitude, float* longitude);
 uint8_t gps_sentence_ready(void);
+void gps_reset(void);
 
 #endif

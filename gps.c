@@ -1,4 +1,5 @@
 #include "gps.h"
+#include "lcd.h"
 #include <string.h>
 #include <stdlib.h>
 #include <avr/interrupt.h>
@@ -51,11 +52,16 @@ ISR(USART_RX_vect) {
 
 
 void parse_gps_coordinates(char* sentence, float* latitude, float* longitude) {
-    if (strncmp(sentence, "$GPRMC", 6) != 0 && strncmp(sentence, "$GPGGA", 6) != 0) {
-        return;
+    uint8_t is_rmc = 0;
+    if (strncmp(sentence, "$GPRMC", 6) == 0) {
+        is_rmc = 1;
+    } else if (strncmp(sentence, "$GPGGA", 6) == 0) {
+        is_rmc = 0;
+    } else {
+        return; // Not a supported sentence
     }
 
-    // Make a temporary copy so strtok doesn't modify the original sentence
+    // Make a temporary copy so strtok doesn't modify the original
     char temp[GPS_BUFFER_SIZE];
     strncpy(temp, sentence, GPS_BUFFER_SIZE - 1);
     temp[GPS_BUFFER_SIZE - 1] = '\0';
@@ -71,18 +77,40 @@ void parse_gps_coordinates(char* sentence, float* latitude, float* longitude) {
     while (token != NULL) {
         field++;
 
-        if (field == 3) {
-            strncpy(lat_str, token, sizeof(lat_str) - 1);
-        } else if (field == 4) {
-            lat_dir = token[0];
-        } else if (field == 5) {
-            strncpy(lon_str, token, sizeof(lon_str) - 1);
-        } else if (field == 6) {
-            lon_dir = token[0];
-            break;
+        if (is_rmc) {
+            // $GPRMC field numbers
+            if (field == 4) {
+                strncpy(lat_str, token, sizeof(lat_str) - 1);
+            } else if (field == 5) {
+                lat_dir = token[0];
+            } else if (field == 6) {
+                strncpy(lon_str, token, sizeof(lon_str) - 1);
+            } else if (field == 7) {
+                lon_dir = token[0];
+                break;
+            }
+        } else {
+            // $GPGGA field numbers
+            if (field == 2) {
+                strncpy(lat_str, token, sizeof(lat_str) - 1);
+            } else if (field == 3) {
+                lat_dir = token[0];
+            } else if (field == 4) {
+                strncpy(lon_str, token, sizeof(lon_str) - 1);
+            } else if (field == 5) {
+                lon_dir = token[0];
+                break;
+            }
         }
+
         token = strtok(NULL, ",");
     }
+
+    // DEBUG
+    // lcd_moveto(0,0);
+    // lcd_stringout(lat_str);
+    // lcd_moveto(1,0);
+    // lcd_stringout(lon_str);
 
     float lat = atof(lat_str);
     float lon = atof(lon_str);
@@ -97,6 +125,7 @@ void parse_gps_coordinates(char* sentence, float* latitude, float* longitude) {
     *longitude = lon_deg + lon_min / 60.0;
     if (lon_dir == 'W') *longitude = -*longitude;
 }
+
 
 // #include "gps.h"
 // #include <string.h>

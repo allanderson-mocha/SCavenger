@@ -29,7 +29,7 @@ volatile uint8_t clue_button_pressed = 0;
 volatile uint8_t back_button_pressed = 0;
 volatile uint8_t next_button_pressed = 0;
 
-uint8_t EEMEM stored_puzzle_index;
+uint8_t stored_puzzle_index EEMEM;
 
 uint8_t display_dirty = 1;
 uint8_t just_transitioned = 0;

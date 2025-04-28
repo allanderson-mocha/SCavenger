@@ -3,6 +3,7 @@
 
 #include <avr/io.h>
 #include <stdint.h>
+#include <avr/pgmspace.h>
 
 #define BRIGHT_THRESHOLD 5.0
 #define MAX_CHARS_PER_LINE 20
@@ -41,11 +42,14 @@ typedef struct {
     uint8_t puzzle_complete;
     float initial_light;
     uint8_t clue_menu_open;
+    int32_t base_altitude;
+    float target_latitude;
+    float target_longitude;
 } GameState;
 
 extern GameState game;
 
-extern const char** puzzle_dialogues[PUZZLE_COUNT];
+extern const char* const* const puzzle_dialogues[PUZZLE_COUNT] PROGMEM;
 extern const char* puzzle_prompts[PUZZLE_COUNT];
 extern const char* puzzle_clues[PUZZLE_COUNT][3];
 extern const char* clue_menu_text;
@@ -64,10 +68,12 @@ extern DialogueState dialogue;
 
 void morse_update(uint16_t elapsed_ms);
 void init_say(DialogueState* state, const char* text);
+void init_say_from_progmem(DialogueState* state, const char* progmem_ptr);
 void say_step(DialogueState* state);
 void say_voice_click(void);
 void reset_game(void);
 void setup_buttons(void);
 void update_display(void);
+void copy_progmem_string(char* dest, const char* progmem_ptr);
 
 #endif // MAIN_H

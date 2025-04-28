@@ -468,9 +468,14 @@ int main(void) {
 
         if (game.puzzle_index == 4 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen == SCREEN_PROMPT) {
             if (gps_sentence_ready()) {
-                gps_ready = 0; // reset manually if needed
-                parse_gps_coordinates(gps_buffer, &latitude, &longitude);
-                gps_reset();   // clear buffer for next sentence
+                gps_ready = 0;
+
+                static char safe_copy[GPS_BUFFER_SIZE];
+                memcpy(safe_copy, gps_buffer, GPS_BUFFER_SIZE);
+            
+                gps_reset();
+            
+                parse_gps_coordinates(safe_copy, &latitude, &longitude);
 
                 if (latitude > 29.97f && latitude < 49.73f && longitude > -127.44f && longitude < -63.76) {
                     if (!target_initialized) {

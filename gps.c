@@ -62,7 +62,7 @@ void parse_gps_coordinates(char* sentence, float* latitude, float* longitude) {
     }
 
     // Make a temporary copy so strtok doesn't modify the original
-    char temp[GPS_BUFFER_SIZE];
+    static char temp[GPS_BUFFER_SIZE];
     strncpy(temp, sentence, GPS_BUFFER_SIZE - 1);
     temp[GPS_BUFFER_SIZE - 1] = '\0';
 

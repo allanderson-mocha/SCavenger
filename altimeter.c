@@ -33,7 +33,7 @@ void altimeter_init(void) {
 }
 
 // Read altitude from the MPL3115A2 and display the value on the LCD
-float get_altitude(void) { // instead of int
+int32_t get_altitude(void) { // instead of int
     char buffer[17]; // Enough for a 16-character LCD line + null terminator
     uint8_t wbuf[1] = { 0x01 }; // Register address for OUT_P_MSB
     uint8_t rbuf[3];
@@ -57,7 +57,7 @@ float get_altitude(void) { // instead of int
     lcd_moveto(1, 0);
     lcd_stringout(buffer);
     */
-   return (float)altitude;
+   return altitude;
 }
 
 // Read temperature from MPL3115A2 in Celsius

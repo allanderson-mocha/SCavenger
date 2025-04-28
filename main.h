@@ -42,7 +42,9 @@ typedef struct {
     uint8_t puzzle_complete;
     float initial_light;
     uint8_t clue_menu_open;
-    uint16_t base_altitude;
+    int32_t base_altitude;
+    float target_latitude;
+    float target_longitude;
 } GameState;
 
 extern GameState game;

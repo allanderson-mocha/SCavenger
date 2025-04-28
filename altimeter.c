@@ -34,7 +34,6 @@ void altimeter_init(void) {
 
 // Read altitude from the MPL3115A2 and display the value on the LCD
 int32_t get_altitude(void) { // instead of int
-    char buffer[17]; // Enough for a 16-character LCD line + null terminator
     uint8_t wbuf[1] = { 0x01 }; // Register address for OUT_P_MSB
     uint8_t rbuf[3];
     
@@ -42,7 +41,7 @@ int32_t get_altitude(void) { // instead of int
     if(i2c_io(MPL3115A2_ADDRESS << 1, wbuf, 1, rbuf, 3) != 0) {
         lcd_moveto(1, 0);
         lcd_stringout("I2C read error  ");
-        return;
+        return 0;
     }
     
     // Combine the three bytes into a 20-bit altitude value

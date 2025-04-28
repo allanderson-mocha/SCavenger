@@ -2,6 +2,7 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
+#include <avr/eeprom.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -27,6 +28,8 @@ volatile uint8_t power_button_pressed = 0;
 volatile uint8_t clue_button_pressed = 0;
 volatile uint8_t back_button_pressed = 0;
 volatile uint8_t next_button_pressed = 0;
+
+uint8_t EEMEM stored_puzzle_index;
 
 uint8_t display_dirty = 1;
 uint8_t just_transitioned = 0;
@@ -329,6 +332,9 @@ int main(void) {
             }
         }
 
+        // Load Puzzle Index
+        game.puzzle_index = eeprom_read_byte(&stored_puzzle_index);
+
 
         // Puzzle #1: Light Sensor Tutorial
         if (game.mode == MODE_PUZZLE && game.puzzle_index == 0 && !game.puzzle_complete) {
@@ -343,6 +349,8 @@ int main(void) {
                 game.clue_menu_open = 0;
                 // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][game.dialogue_index]);
                 init_current_dialogue(&dialogue);
+                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+
             }
         }
         
@@ -360,6 +368,7 @@ int main(void) {
                 // init_say_from_progmem(&dialogue, puzzle_dialogues[game.puzzle_index][0]);
                 init_current_dialogue(&dialogue);
                 morse_led_off();
+                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
             }
         }
 
@@ -388,6 +397,7 @@ int main(void) {
                 game.clue_menu_open = 0;
                 altitude_initialized = 0;
                 init_current_dialogue(&dialogue);
+                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
             }
         }
         
@@ -434,6 +444,8 @@ int main(void) {
                 game.dialogue_index = 0;
                 game.clue_menu_open = 0;
                 init_current_dialogue(&dialogue);
+                eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+
             }
         } else if (game.puzzle_index == 3 && game.mode == MODE_PUZZLE && !game.puzzle_complete && game.current_screen != SCREEN_PROMPT) {
             just_transitioned = 1;
@@ -476,6 +488,8 @@ int main(void) {
                         game.dialogue_index = 0;
                         game.clue_menu_open = 0;
                         init_current_dialogue(&dialogue);
+                        eeprom_update_byte(&stored_puzzle_index, game.puzzle_index);
+
                     }
                 }
             }

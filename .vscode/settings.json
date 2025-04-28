@@ -4,6 +4,6 @@
         "stdint.h": "c",
         "solenoid.h": "c"
     },
-    "cmake.sourceDirectory": "/home/johnnyc/capstone/esp",
+    "cmake.sourceDirectory": "/home/johnnyc/capstone/esp_flashing",
     "idf.pythonInstallPath": "/usr/bin/python3"
 }

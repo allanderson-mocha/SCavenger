@@ -3,7 +3,6 @@
 
 #include <stdint.h>
 
-#define F_CPU 8000000UL      // 8 MHz clock speed
 #define MPL3115A2_ADDRESS 0x60 // 7-bit address
 
 

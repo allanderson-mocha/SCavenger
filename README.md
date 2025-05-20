@@ -112,3 +112,8 @@ avr-objcopy -O ihex -R .eeprom scavenger.elf scavenger.hex
 
 # Flash
 avrdude -c usbtiny -p m328p -U flash:w:scavenger.hex
+```
+
+## 📄 Project Report
+[Read the full final report (PDF)](./SCavenger%20Project%20Report.pdf)
+

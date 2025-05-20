@@ -1,6 +1,6 @@
 # The SCavenger
 
-An interactive, portable adventure journal that combines puzzle-solving with physical movement to promote healthier habits and social play. Developed for USC's EE 459 Embedded Systems Design Lab in collaboration with Otis College of Art and Design.
+An interactive, portable adventure journal that combines puzzle-solving with physical movement to promote healthier habits and social play. Developed for USC's EE 459 Embedded Systems Design Lab in collaboration with Otis College of Art and Design. This project idea was decided by our group of five students to create a health and fitness oriented product. The development of the project was completely independent and faculty was only asked for advice or references.
 
 ## 🧭 Overview
 
